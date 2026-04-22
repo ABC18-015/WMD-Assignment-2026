@@ -17,116 +17,6 @@
     
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <style>
-        /* Additional responsive styles for blog page */
-        @media (max-width: 992px) {
-            .blog-container > div {
-                grid-template-columns: 1fr !important;
-                gap: 40px !important;
-            }
-            
-            .blog-sidebar {
-                order: -1;
-            }
-            
-            .sidebar-widget {
-                margin-bottom: 20px !important;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .page-title-section h1 {
-                font-size: 32px !important;
-            }
-            
-            .page-title-section p {
-                font-size: 16px !important;
-            }
-            
-            .featured-image {
-                height: 250px !important;
-            }
-            
-            .featured-content {
-                padding: 20px !important;
-            }
-            
-            .featured-content h2 {
-                font-size: 24px !important;
-            }
-            
-            .featured-content p {
-                font-size: 14px !important;
-            }
-            
-            .blog-grid {
-                grid-template-columns: 1fr !important;
-            }
-            
-            .category-link {
-                text-align: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .navbar nav a {
-                margin: 0 8px !important;
-                font-size: 12px !important;
-            }
-            
-            .btn-nav {
-                padding: 6px 12px !important;
-            }
-            
-            .featured-image {
-                height: 200px !important;
-            }
-            
-            .blog-card {
-                margin-bottom: 20px;
-            }
-        }
-        
-        /* Category button hover effects */
-        .category-link {
-            transition: all 0.3s ease !important;
-        }
-        
-        .category-link:hover {
-            background-color: #2C5F2D !important;
-            color: white !important;
-            transform: translateX(5px);
-        }
-        
-        /* Search button hover */
-        #searchButton {
-            transition: background-color 0.3s ease !important;
-        }
-        
-        #searchButton:hover {
-            background-color: #c55a3e !important;
-        }
-        
-        /* Newsletter button hover */
-        #newsletterSubscribe {
-            transition: background-color 0.3s ease !important;
-        }
-        
-        #newsletterSubscribe:hover {
-            background-color: #c55a3e !important;
-        }
-        
-        /* Read more links hover */
-        .read-more-link {
-            transition: all 0.3s ease !important;
-        }
-        
-        .read-more-link:hover {
-            color: #c55a3e !important;
-            gap: 12px !important;
-        }
-    </style>
 </head>
 <body>
 
@@ -141,7 +31,7 @@
             <a href="index.html">Home</a>
             <a href="Tours.html">Tours</a>
             <a href="AboutUs.html">About Us</a>
-            <a href="Blog.html">Blog</a>
+            <a href="Blog.html" class="active">Blog</a>
             <a href="contact.html">Contact</a>
             <a href="feedback.html">Feedback</a>
             <a href="booking.html" class="btn-nav">Book Now</a>
@@ -171,13 +61,14 @@
                             <span style="position: absolute; top: 20px; left: 20px; background-color: #E76F51; color: white; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;">Featured</span>
                         </div>
                         <div class="featured-content" style="padding: 30px;">
-                            <div style="display: flex; gap: 20px; margin-bottom: 15px; font-size: 14px; color: #666; flex-wrap: wrap;">
+                            <div style="display: flex; gap: 20px; margin-bottom: 15px; font-size: 14px; color: #666;">
                                 <span><i class="far fa-calendar-alt" style="color: #D4A373; margin-right: 5px;"></i> March 15, 2026</span>
                                 <span><i class="fas fa-tag" style="color: #D4A373; margin-right: 5px;"></i> Destination Guides</span>
                             </div>
                             <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: #2C5F2D; margin-bottom: 15px;">Best Time to Visit the Okavango Delta</h2>
                             <p style="font-size: 16px; line-height: 1.7; color: #555; margin-bottom: 20px;">Discover when to experience the Delta at its most spectacular, from flood season wildlife to dry season game viewing.</p>
-                            <a href="blog-post.html?id=1" class="read-more-link" style="display: inline-flex; align-items: center; color: #E76F51; text-decoration: none; font-weight: 600; transition: all 0.3s;">Read More <i class="fas fa-arrow-right" style="margin-left: 8px; transition: margin-left 0.3s;"></i></a>
+                            <!-- Read More button - opens modal with full article -->
+                            <button onclick="openBlogModal(1)" style="display: inline-flex; align-items: center; background: none; border: none; color: #E76F51; cursor: pointer; font-weight: 600; font-size: 16px; transition: color 0.3s;">Read More <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></button>
                         </div>
                     </div>
                 </div>
@@ -189,98 +80,98 @@
                     <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;">
                         
                         <!-- Blog Post 1 -->
-                        <div class="blog-card" data-category="safari-tips" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0" style="background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div class="blog-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0" style="background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;">
                             <div class="blog-image" style="height: 200px; overflow: hidden;">
                                 <img src="https://images.unsplash.com/photo-1760199078320-18976d421338?w=400&h=250&fit=crop" alt="Safari Packing" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                             </div>
                             <div class="blog-content" style="padding: 20px;">
-                                <div style="display: flex; gap: 12px; margin-bottom: 10px; font-size: 12px; color: #888; flex-wrap: wrap;">
+                                <div style="display: flex; gap: 12px; margin-bottom: 10px; font-size: 12px; color: #888;">
                                     <span><i class="far fa-calendar-alt" style="color: #D4A373; margin-right: 4px;"></i> Mar 10, 2026</span>
                                     <span><i class="fas fa-tag" style="color: #D4A373; margin-right: 4px;"></i> Safari Tips</span>
                                 </div>
                                 <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #2C5F2D; margin-bottom: 10px;">What to Pack for a Botswana Safari</h4>
                                 <p style="font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 15px;">Essential gear, clothing tips, and packing strategies for your Southern African adventure.</p>
-                                <a href="blog-post.html?id=2" class="read-more-link" style="display: inline-flex; align-items: center; color: #E76F51; text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.3s;">Read More <i class="fas fa-arrow-right" style="margin-left: 6px; transition: margin-left 0.3s;"></i></a>
+                                <button onclick="openBlogModal(2)" style="display: inline-flex; align-items: center; background: none; border: none; color: #E76F51; cursor: pointer; font-size: 14px; font-weight: 600; transition: color 0.3s;">Read More <i class="fas fa-arrow-right" style="margin-left: 6px;"></i></button>
                             </div>
                         </div>
 
                         <!-- Blog Post 2 -->
-                        <div class="blog-card" data-category="conservation" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" style="background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div class="blog-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" style="background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;">
                             <div class="blog-image" style="height: 200px; overflow: hidden;">
                                 <img src="https://images.unsplash.com/photo-1759215290881-cc6a8ccbb37e?w=400&h=250&fit=crop" alt="Elephant Conservation" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                             </div>
                             <div class="blog-content" style="padding: 20px;">
-                                <div style="display: flex; gap: 12px; margin-bottom: 10px; font-size: 12px; color: #888; flex-wrap: wrap;">
+                                <div style="display: flex; gap: 12px; margin-bottom: 10px; font-size: 12px; color: #888;">
                                     <span><i class="far fa-calendar-alt" style="color: #D4A373; margin-right: 4px;"></i> Mar 5, 2026</span>
                                     <span><i class="fas fa-tag" style="color: #D4A373; margin-right: 4px;"></i> Conservation</span>
                                 </div>
                                 <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #2C5F2D; margin-bottom: 10px;">Supporting Elephant Conservation in Chobe</h4>
                                 <p style="font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 15px;">How Mosepele partners with local conservation organizations to protect Botswana's elephant herds.</p>
-                                <a href="blog-post.html?id=3" class="read-more-link" style="display: inline-flex; align-items: center; color: #E76F51; text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.3s;">Read More <i class="fas fa-arrow-right" style="margin-left: 6px; transition: margin-left 0.3s;"></i></a>
+                                <button onclick="openBlogModal(3)" style="display: inline-flex; align-items: center; background: none; border: none; color: #E76F51; cursor: pointer; font-size: 14px; font-weight: 600; transition: color 0.3s;">Read More <i class="fas fa-arrow-right" style="margin-left: 6px;"></i></button>
                             </div>
                         </div>
 
                         <!-- Blog Post 3 -->
-                        <div class="blog-card" data-category="safari-tips" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" style="background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div class="blog-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" style="background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;">
                             <div class="blog-image" style="height: 200px; overflow: hidden;">
                                 <img src="https://images.unsplash.com/photo-1711062752040-8587e1a3b8e8?w=400&h=250&fit=crop" alt="Walking Safari" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                             </div>
                             <div class="blog-content" style="padding: 20px;">
-                                <div style="display: flex; gap: 12px; margin-bottom: 10px; font-size: 12px; color: #888; flex-wrap: wrap;">
+                                <div style="display: flex; gap: 12px; margin-bottom: 10px; font-size: 12px; color: #888;">
                                     <span><i class="far fa-calendar-alt" style="color: #D4A373; margin-right: 4px;"></i> Feb 28, 2026</span>
                                     <span><i class="fas fa-tag" style="color: #D4A373; margin-right: 4px;"></i> Safari Tips</span>
                                 </div>
                                 <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #2C5F2D; margin-bottom: 10px;">Walking Safaris: A Different Perspective</h4>
                                 <p style="font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 15px;">Experience the bush at ground level with our guide to walking safaris in Botswana's wilderness.</p>
-                                <a href="blog-post.html?id=4" class="read-more-link" style="display: inline-flex; align-items: center; color: #E76F51; text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.3s;">Read More <i class="fas fa-arrow-right" style="margin-left: 6px; transition: margin-left 0.3s;"></i></a>
+                                <button onclick="openBlogModal(4)" style="display: inline-flex; align-items: center; background: none; border: none; color: #E76F51; cursor: pointer; font-size: 14px; font-weight: 600; transition: color 0.3s;">Read More <i class="fas fa-arrow-right" style="margin-left: 6px;"></i></button>
                             </div>
                         </div>
 
                         <!-- Blog Post 4 -->
-                        <div class="blog-card" data-category="destination-guides" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" style="background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div class="blog-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" style="background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;">
                             <div class="blog-image" style="height: 200px; overflow: hidden;">
                                 <img src="https://images.unsplash.com/photo-1761078206756-68d3023f3021?w=400&h=250&fit=crop" alt="San Bushmen" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                             </div>
                             <div class="blog-content" style="padding: 20px;">
-                                <div style="display: flex; gap: 12px; margin-bottom: 10px; font-size: 12px; color: #888; flex-wrap: wrap;">
+                                <div style="display: flex; gap: 12px; margin-bottom: 10px; font-size: 12px; color: #888;">
                                     <span><i class="far fa-calendar-alt" style="color: #D4A373; margin-right: 4px;"></i> Feb 20, 2026</span>
                                     <span><i class="fas fa-tag" style="color: #D4A373; margin-right: 4px;"></i> Destination Guides</span>
                                 </div>
                                 <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #2C5F2D; margin-bottom: 10px;">Meeting the San Bushmen of the Kalahari</h4>
                                 <p style="font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 15px;">Respectful cultural encounters and learning from one of Africa's oldest indigenous groups.</p>
-                                <a href="blog-post.html?id=5" class="read-more-link" style="display: inline-flex; align-items: center; color: #E76F51; text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.3s;">Read More <i class="fas fa-arrow-right" style="margin-left: 6px; transition: margin-left 0.3s;"></i></a>
+                                <button onclick="openBlogModal(5)" style="display: inline-flex; align-items: center; background: none; border: none; color: #E76F51; cursor: pointer; font-size: 14px; font-weight: 600; transition: color 0.3s;">Read More <i class="fas fa-arrow-right" style="margin-left: 6px;"></i></button>
                             </div>
                         </div>
 
                         <!-- Blog Post 5 -->
-                        <div class="blog-card" data-category="safari-tips" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" style="background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div class="blog-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" style="background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;">
                             <div class="blog-image" style="height: 200px; overflow: hidden;">
                                 <img src="https://images.unsplash.com/photo-1665270409076-880b210fb0fb?w=400&h=250&fit=crop" alt="Photography Tips" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                             </div>
                             <div class="blog-content" style="padding: 20px;">
-                                <div style="display: flex; gap: 12px; margin-bottom: 10px; font-size: 12px; color: #888; flex-wrap: wrap;">
+                                <div style="display: flex; gap: 12px; margin-bottom: 10px; font-size: 12px; color: #888;">
                                     <span><i class="far fa-calendar-alt" style="color: #D4A373; margin-right: 4px;"></i> Feb 15, 2026</span>
                                     <span><i class="fas fa-tag" style="color: #D4A373; margin-right: 4px;"></i> Safari Tips</span>
                                 </div>
                                 <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #2C5F2D; margin-bottom: 10px;">Photography Tips for Safari</h4>
                                 <p style="font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 15px;">Capture stunning wildlife images with advice from our professional photographer guides.</p>
-                                <a href="blog-post.html?id=6" class="read-more-link" style="display: inline-flex; align-items: center; color: #E76F51; text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.3s;">Read More <i class="fas fa-arrow-right" style="margin-left: 6px; transition: margin-left 0.3s;"></i></a>
+                                <button onclick="openBlogModal(6)" style="display: inline-flex; align-items: center; background: none; border: none; color: #E76F51; cursor: pointer; font-size: 14px; font-weight: 600; transition: color 0.3s;">Read More <i class="fas fa-arrow-right" style="margin-left: 6px;"></i></button>
                             </div>
                         </div>
 
                         <!-- Blog Post 6 -->
-                        <div class="blog-card" data-category="company-news" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" style="background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;">
+                        <div class="blog-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" style="background-color: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s;">
                             <div class="blog-image" style="height: 200px; overflow: hidden;">
                                 <img src="https://images.unsplash.com/photo-1760199078571-7eb300d44fde?w=400&h=250&fit=crop" alt="Sustainability" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                             </div>
                             <div class="blog-content" style="padding: 20px;">
-                                <div style="display: flex; gap: 12px; margin-bottom: 10px; font-size: 12px; color: #888; flex-wrap: wrap;">
+                                <div style="display: flex; gap: 12px; margin-bottom: 10px; font-size: 12px; color: #888;">
                                     <span><i class="far fa-calendar-alt" style="color: #D4A373; margin-right: 4px;"></i> Feb 10, 2026</span>
                                     <span><i class="fas fa-tag" style="color: #D4A373; margin-right: 4px;"></i> Company News</span>
                                 </div>
                                 <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #2C5F2D; margin-bottom: 10px;">Announcing Our New Sustainability Initiative</h4>
                                 <p style="font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 15px;">Mosepele commits to carbon-neutral operations and expanded community support programs.</p>
-                                <a href="blog-post.html?id=7" class="read-more-link" style="display: inline-flex; align-items: center; color: #E76F51; text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.3s;">Read More <i class="fas fa-arrow-right" style="margin-left: 6px; transition: margin-left 0.3s;"></i></a>
+                                <button onclick="openBlogModal(7)" style="display: inline-flex; align-items: center; background: none; border: none; color: #E76F51; cursor: pointer; font-size: 14px; font-weight: 600; transition: color 0.3s;">Read More <i class="fas fa-arrow-right" style="margin-left: 6px;"></i></button>
                             </div>
                         </div>
                     </div>
@@ -294,7 +185,7 @@
                 <div class="sidebar-widget" data-aos="fade-left" data-aos-duration="500" style="background-color: white; border-radius: 12px; padding: 25px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                     <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #2C5F2D; margin-bottom: 20px;">Categories</h3>
                     <ul style="list-style: none;">
-                        <li style="margin-bottom: 12px;"><a href="#" class="category-link" data-category="all" style="display: block; padding: 8px 12px; background-color: #2C5F2D; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s;">All Posts</a></li>
+                        <li style="margin-bottom: 12px;"><a href="#" class="category-link" data-category="all" style="display: block; padding: 8px 12px; background-color: #2C5F2D; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">All Posts</a></li>
                         <li style="margin-bottom: 12px;"><a href="#" class="category-link" data-category="safari-tips" style="display: block; padding: 8px 12px; background-color: #FDF8F0; color: #333; border-radius: 8px; text-decoration: none; transition: all 0.3s;">Safari Tips</a></li>
                         <li style="margin-bottom: 12px;"><a href="#" class="category-link" data-category="destination-guides" style="display: block; padding: 8px 12px; background-color: #FDF8F0; color: #333; border-radius: 8px; text-decoration: none; transition: all 0.3s;">Destination Guides</a></li>
                         <li style="margin-bottom: 12px;"><a href="#" class="category-link" data-category="conservation" style="display: block; padding: 8px 12px; background-color: #FDF8F0; color: #333; border-radius: 8px; text-decoration: none; transition: all 0.3s;">Conservation</a></li>
@@ -305,9 +196,9 @@
                 <!-- Search Widget -->
                 <div class="sidebar-widget" data-aos="fade-left" data-aos-duration="500" data-aos-delay="100" style="background-color: white; border-radius: 12px; padding: 25px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                     <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #2C5F2D; margin-bottom: 20px;">Search</h3>
-                    <div style="display: flex; flex-wrap: nowrap;">
-                        <input type="text" id="searchInput" placeholder="Search articles..." style="flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 8px 0 0 8px; font-family: 'Open Sans', sans-serif; outline: none; min-width: 0;">
-                        <button id="searchButton" style="background-color: #E76F51; color: white; border: none; padding: 12px 18px; border-radius: 0 8px 8px 0; cursor: pointer; transition: background-color 0.3s;"><i class="fas fa-search"></i></button>
+                    <div style="display: flex;">
+                        <input type="text" id="searchInput" placeholder="Search articles..." style="flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 8px 0 0 8px; font-family: 'Open Sans', sans-serif; outline: none;">
+                        <button id="searchButton" style="background-color: #E76F51; color: white; border: none; padding: 12px 18px; border-radius: 0 8px 8px 0; cursor: pointer;"><i class="fas fa-search"></i></button>
                     </div>
                 </div>
 
@@ -315,9 +206,19 @@
                 <div class="sidebar-widget" data-aos="fade-left" data-aos-duration="500" data-aos-delay="200" style="background-color: #2C5F2D; border-radius: 12px; padding: 25px; color: white;">
                     <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #FDF8F0; margin-bottom: 15px;">Subscribe</h3>
                     <p style="font-size: 14px; color: #FDF8F0CC; margin-bottom: 20px;">Get safari tips and travel inspiration delivered to your inbox</p>
-                    <input type="email" id="newsletterEmail" placeholder="Your email" style="width: 100%; padding: 12px; margin-bottom: 15px; border: none; border-radius: 8px; font-family: 'Open Sans', sans-serif; box-sizing: border-box;">
-                    <button id="newsletterSubscribe" style="width: 100%; background-color: #E76F51; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600; transition: background-color 0.3s;">Subscribe</button>
+                    <input type="email" id="newsletterEmail" placeholder="Your email" style="width: 100%; padding: 12px; margin-bottom: 15px; border: none; border-radius: 8px; font-family: 'Open Sans', sans-serif;">
+                    <button id="newsletterSubscribe" style="width: 100%; background-color: #E76F51; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">Subscribe</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOG POST MODAL (Popup for Read More) -->
+    <div id="blogModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); z-index: 2000; overflow-y: auto;">
+        <div style="position: relative; max-width: 800px; margin: 50px auto; background-color: white; border-radius: 12px; padding: 30px;">
+            <button onclick="closeBlogModal()" style="position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 28px; cursor: pointer; color: #999;">&times;</button>
+            <div id="modalContent">
+                <!-- Dynamic content will be inserted here -->
             </div>
         </div>
     </div>
@@ -327,7 +228,7 @@
         <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
             <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: #2C5F2D; margin-bottom: 15px;">Ready to Experience Botswana?</h2>
             <p style="font-size: 16px; color: #666; margin-bottom: 30px;">Let our team craft your perfect safari journey</p>
-            <a href="contact.html" class="btn-cta" style="display: inline-block; background-color: #E76F51; color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Plan Your Safari</a>
+            <a href="contact.html" class="btn-cta" style="display: inline-block; background-color: #E76F51; color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600;">Plan Your Safari</a>
         </div>
     </section>
 
@@ -344,25 +245,18 @@
             <div class="footer-column">
                 <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Quick Links</h4>
                 <ul style="list-style: none;">
-                    <li style="margin-bottom: 10px;"><a href="index.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Home</a></li>
-                    <li style="margin-bottom: 10px;"><a href="Tours.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Tours</a></li>
-                    <li style="margin-bottom: 10px;"><a href="AboutUs.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">About Us</a></li>
-                    <li style="margin-bottom: 10px;"><a href="Blog.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Blog</a></li>
-                    <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Contact</a></li>
-                    <li style="margin-bottom: 10px;"><a href="feedback.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Feedback</a></li>
-                    <li style="margin-bottom: 10px;"><a href="booking.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Book Now</a></li>
-                    <li style="margin-bottom: 10px;"><a href="faq.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">FAQs</a></li>
-                    <li style="margin-bottom: 10px;"><a href="privacy.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Privacy Policy</a></li>
-                    <li style="margin-bottom: 10px;"><a href="terms.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Terms & Conditions</a></li>
-                    <li style="margin-bottom: 10px;"><a href="sitemap.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Sitemap</a></li>
+                    <li style="margin-bottom: 10px;"><a href="faq.html" style="color: #ccc; text-decoration: none; font-size: 14px;">FAQs</a></li>
+                    <li style="margin-bottom: 10px;"><a href="privacy.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Privacy Policy</a></li>
+                    <li style="margin-bottom: 10px;"><a href="terms.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Terms & Conditions</a></li>
+                    <li style="margin-bottom: 10px;"><a href="sitemap.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Sitemap</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Follow Us</h4>
                 <div class="social-icons">
-                    <a href="#" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;"><i class="fab fa-instagram"></i></a>
-                    <a href="#" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;"><i class="fab fa-youtube"></i></a>
+                    <a href="#" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px;"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-column">
@@ -370,7 +264,7 @@
                 <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Get travel inspiration and special offers</p>
                 <form class="newsletter-form" style="display: flex; flex-direction: column; gap: 10px;">
                     <input type="email" placeholder="Your email address" style="padding: 10px; border: none; border-radius: 5px; font-family: 'Open Sans', sans-serif;">
-                    <button type="submit" style="background-color: #e76f51; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background-color 0.3s;">Subscribe</button>
+                    <button type="submit" style="background-color: #e76f51; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: 600;">Subscribe</button>
                 </form>
             </div>
         </div>
@@ -379,8 +273,93 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Category Filtering and Search -->
+    <!-- JavaScript for Category Filtering, Search, and Modal -->
     <script>
+        // Blog posts database
+        const blogPosts = {
+            1: {
+                title: "Best Time to Visit the Okavango Delta",
+                date: "March 15, 2026",
+                category: "Destination Guides",
+                content: "<p>The Okavango Delta is a year-round destination, but the best time to visit depends on what you want to see and experience.</p><h3>Flood Season (June - August)</h3><p>This is the peak season when the delta is flooded, creating incredible waterways for mokoro safaris. Wildlife concentrates around the water sources, making game viewing exceptional.</p><h3>Green Season (November - March)</h3><p>Lush landscapes, newborn animals, and spectacular bird watching. This is also the low season with lower prices and fewer tourists.</p><h3>Dry Season (April - October)</h3><p>Animals gather around permanent water sources, making them easier to spot. The weather is pleasant with sunny days and cool nights.</p>"
+            },
+            2: {
+                title: "What to Pack for a Botswana Safari",
+                date: "March 10, 2026",
+                category: "Safari Tips",
+                content: "<p>Packing for a Botswana safari requires careful planning. Here's your essential packing list:</p><h3>Clothing</h3><p>Neutral-colored clothing (khaki, olive, beige), long sleeves and pants for protection, warm jacket for early mornings, swimwear for lodges with pools.</p><h3>Footwear</h3><p>Comfortable closed-toe walking shoes, sandals for camp, waterproof boots if traveling in wet season.</p><h3>Gear</h3><p>Binoculars, camera with zoom lens, headlamp/flashlight, power bank, sunscreen and insect repellent.</p>"
+            },
+            3: {
+                title: "Supporting Elephant Conservation in Chobe",
+                date: "March 5, 2026",
+                category: "Conservation",
+                content: "<p>Chobe National Park is home to over 50,000 elephants - one of the largest concentrations in Africa. Mosepele partners with local conservation organizations to protect these magnificent creatures.</p><h3>Our Conservation Efforts</h3><p>We contribute 10% of all safari proceeds to anti-poaching patrols, support elephant tracking and research programs, and work with local communities to reduce human-elephant conflict.</p><h3>How You Can Help</h3><p>Choose responsible tour operators, avoid elephant riding or entertainment venues, and consider donating to conservation organizations working in the region.</p>"
+            },
+            4: {
+                title: "Walking Safaris: A Different Perspective",
+                date: "February 28, 2026",
+                category: "Safari Tips",
+                content: "<p>A walking safari offers an intimate connection with the African bush that you simply cannot get from a vehicle.</p><h3>What to Expect</h3><p>Guided by armed professional guides, you'll learn to track animals, identify plants and birds, and understand the delicate ecosystem around you.</p><h3>Safety First</h3><p>Your guide will brief you on safety protocols. Always listen to your guide, stay quiet, and wear appropriate neutral-colored clothing.</p><h3>Best Locations</h3><p>The Okavango Delta and Moremi Game Reserve offer excellent walking safari opportunities with diverse wildlife and terrain.</p>"
+            },
+            5: {
+                title: "Meeting the San Bushmen of the Kalahari",
+                date: "February 20, 2026",
+                category: "Destination Guides",
+                content: "<p>The San Bushmen are one of Africa's oldest indigenous groups, with a rich cultural heritage dating back over 20,000 years.</p><h3>Cultural Experience</h3><p>Visitors can learn about traditional hunting techniques, medicinal plants, and ancient survival skills directly from San guides.</p><h3>Respectful Tourism</h3><p>Mosepele ensures that all cultural visits are conducted respectfully, with fair compensation to the San communities and minimal disruption to their traditional way of life.</p><h3>What You'll Learn</h3><p>Tracking skills, fire-making without matches, finding water in the desert, and the incredible biodiversity of the Kalahari.</p>"
+            },
+            6: {
+                title: "Photography Tips for Safari",
+                date: "February 15, 2026",
+                category: "Safari Tips",
+                content: "<p>Capturing stunning wildlife images requires patience, skill, and the right equipment.</p><h3>Camera Gear</h3><p>A zoom lens (200-400mm or more) is essential for wildlife photography. Bring extra batteries and memory cards as you'll shoot more than expected.</p><h3>Settings</h3><p>Use shutter priority mode (Tv) with a speed of at least 1/500s for moving animals. Shoot in RAW format for better editing flexibility.</p><h3>Composition Tips</h3><p>Get on eye level with animals, use the rule of thirds, and capture behavior rather than just portraits. The golden hours (sunrise and sunset) offer the best light.</p>"
+            },
+            7: {
+                title: "Announcing Our New Sustainability Initiative",
+                date: "February 10, 2026",
+                category: "Company News",
+                content: "<p>Mosepele is proud to announce our commitment to carbon-neutral operations by 2027.</p><h3>Our Pledge</h3><p>We will offset all carbon emissions from our safari vehicles, flights, and lodges. We're also eliminating single-use plastics across all our operations.</p><h3>Community Impact</h3><p>We're expanding our community support programs, including scholarships for local guides and funding for village water projects.</p><h3>Join Us</h3><p>Travel with Mosepele and know that your safari is helping protect Botswana's wilderness for future generations.</p>"
+            }
+        };
+
+        // Open modal with blog post content
+        function openBlogModal(id) {
+            const post = blogPosts[id];
+            const modal = document.getElementById('blogModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            if (post) {
+                modalContent.innerHTML = `
+                    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: #2C5F2D; margin-bottom: 10px;">${post.title}</h2>
+                    <div style="display: flex; gap: 15px; margin-bottom: 20px; font-size: 14px; color: #666;">
+                        <span><i class="far fa-calendar-alt" style="color: #D4A373; margin-right: 5px;"></i> ${post.date}</span>
+                        <span><i class="fas fa-tag" style="color: #D4A373; margin-right: 5px;"></i> ${post.category}</span>
+                    </div>
+                    <div style="line-height: 1.8; color: #555;">
+                        ${post.content}
+                    </div>
+                    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+                        <p style="font-size: 14px; color: #888;">Questions about this topic? <a href="contact.html" style="color: #E76F51;">Contact our experts →</a></p>
+                    </div>
+                `;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Close modal
+        function closeBlogModal() {
+            document.getElementById('blogModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside content
+        document.getElementById('blogModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeBlogModal();
+            }
+        });
+
+        // Category filtering and search functionality
         document.addEventListener('DOMContentLoaded', function() {
             const categoryLinks = document.querySelectorAll('.category-link');
             const blogCards = document.querySelectorAll('.blog-card');
@@ -388,11 +367,9 @@
             const searchInput = document.getElementById('searchInput');
             const searchButton = document.getElementById('searchButton');
 
-            // Function to filter by category
             function filterByCategory(category) {
                 let visibleCount = 0;
                 
-                // Update active button styling
                 categoryLinks.forEach(link => {
                     if (link.getAttribute('data-category') === category) {
                         link.style.backgroundColor = '#2C5F2D';
@@ -403,11 +380,16 @@
                     }
                 });
 
-                // Filter blog cards using data-category attribute
                 blogCards.forEach(card => {
-                    const cardCategory = card.getAttribute('data-category');
+                    const categorySpan = card.querySelector('.fa-tag').parentElement.innerText.trim();
+                    let cardCategoryValue = '';
                     
-                    if (category === 'all' || cardCategory === category) {
+                    if (categorySpan.includes('Safari Tips')) cardCategoryValue = 'safari-tips';
+                    else if (categorySpan.includes('Destination Guides')) cardCategoryValue = 'destination-guides';
+                    else if (categorySpan.includes('Conservation')) cardCategoryValue = 'conservation';
+                    else if (categorySpan.includes('Company News')) cardCategoryValue = 'company-news';
+                    
+                    if (category === 'all' || cardCategoryValue === category) {
                         card.style.display = 'block';
                         visibleCount++;
                     } else {
@@ -415,13 +397,11 @@
                     }
                 });
 
-                // Hide featured post if not "all"
                 if (featuredPost) {
                     featuredPost.style.display = category === 'all' ? 'block' : 'none';
                 }
             }
 
-            // Add click event to category links
             categoryLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -430,10 +410,8 @@
                 });
             });
 
-            // Search functionality
             function searchArticles() {
                 const searchTerm = searchInput.value.toLowerCase();
-                let visibleCount = 0;
                 
                 blogCards.forEach(card => {
                     const title = card.querySelector('h4').innerText.toLowerCase();
@@ -441,7 +419,6 @@
                     
                     if (title.includes(searchTerm) || excerpt.includes(searchTerm) || searchTerm === '') {
                         card.style.display = 'block';
-                        visibleCount++;
                     } else {
                         card.style.display = 'none';
                     }
@@ -466,12 +443,11 @@
                 });
             }
 
-            // Newsletter subscription alert
             const newsletterSubscribe = document.getElementById('newsletterSubscribe');
             if (newsletterSubscribe) {
                 newsletterSubscribe.addEventListener('click', function() {
                     const email = document.getElementById('newsletterEmail').value;
-                    if (email && email.includes('@') && email.includes('.')) {
+                    if (email && email.includes('@')) {
                         alert('Thank you for subscribing! You will receive our newsletter at ' + email);
                         document.getElementById('newsletterEmail').value = '';
                     } else {
@@ -492,4 +468,3 @@
     </script>
 </body>
 </html>
-
