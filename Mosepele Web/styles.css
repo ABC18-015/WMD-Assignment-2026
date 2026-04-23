@@ -1179,6 +1179,12 @@ body {
 .social-icons a:hover {
     color: #e76f51;
 }
+/* Social Media Icons Hover Effect */
+.social-icons a:hover {
+    color: #E76F51 !important;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
 
 .newsletter-form {
     display: flex;
