@@ -1168,22 +1168,39 @@ body {
     color: #e76f51;
 }
 
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
 .social-icons a {
-    display: inline-block;
-    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
     color: #ccc;
-    font-size: 20px;
-    transition: color 0.3s;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .social-icons a:hover {
-    color: #e76f51;
-}
-/* Social Media Icons Hover Effect */
-.social-icons a:hover {
-    color: #E76F51 !important;
+    background-color: #E76F51;
+    color: white !important;
     transform: translateY(-3px);
-    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .social-icons {
+        justify-content: center;
+    }
 }
 
 .newsletter-form {
