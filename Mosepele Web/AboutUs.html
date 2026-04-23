@@ -12,7 +12,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- Main Stylesheet (Single CSS for all pages) -->
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
     
     <!-- AOS Animation Library -->
@@ -30,64 +30,65 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="Tours.html">Tours</a>
-            <a href="AboutUs.html">About Us</a>
+            <a href="AboutUs.html" class="active">About Us</a>
             <a href="Blog.html">Blog</a>
             <a href="contact.html">Contact</a>
             <a href="feedback.html">Feedback</a>
-            <a href="tour-detail.html" class="btn-nav">Tour Details</a>
             <a href="booking.html" class="btn-nav">Book Now</a>
-            
-    
         </nav>
     </div>
 
     <!-- ABOUT HERO SECTION -->
-    <section class="about-hero">
+    <section class="about-hero" style="height: 50vh; background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1627764409592-6c8e514e8ff5?w=1920&h=600&fit=crop'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center;">
         <div class="about-hero-content" data-aos="fade-up" data-aos-duration="800">
-            <h1>Our Story</h1>
-            <p>Rooted in Botswana, committed to authentic safari experiences</p>
+            <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 700; color: white; margin-bottom: 15px;">Our Story</h1>
+            <p style="font-family: 'Open Sans', sans-serif; font-size: 20px; color: white;">Rooted in Botswana, committed to authentic safari experiences</p>
         </div>
     </section>
 
     <!-- COMPANY OVERVIEW SECTION -->
-    <section class="company-overview">
-        <div class="container">
-            <div class="overview-grid">
-                <div class="overview-text" data-aos="fade-right" data-aos-duration="600">
-                    <h2>Founded in Botswana, For the World</h2>
-                    <div class="mission-box">
-                        <h3><i class="fas fa-bullseye"></i> Mission</h3>
-                        <p>To share Botswana's extraordinary wilderness and rich cultural heritage through ethical, sustainable, and transformative safari experiences that benefit local communities and protect wildlife for future generations.</p>
+    <section class="company-overview" style="padding: 80px 20px; background-color: white;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start;">
+                
+                <div data-aos="fade-right" data-aos-duration="600">
+                    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: #355e3b; margin-bottom: 30px;">Founded in Botswana, For the World</h2>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 10px;"><i class="fas fa-bullseye" style="color: #e76f51; margin-right: 10px;"></i> Mission</h3>
+                        <p style="font-size: 15px; line-height: 1.7; color: #555;">To share Botswana's extraordinary wilderness and rich cultural heritage through ethical, sustainable, and transformative safari experiences that benefit local communities and protect wildlife for future generations.</p>
                     </div>
-                    <div class="vision-box">
-                        <h3><i class="fas fa-eye"></i> Vision</h3>
-                        <p>To be Southern Africa's most trusted safari operator, recognized for authentic experiences, conservation leadership, and meaningful community partnerships.</p>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 10px;"><i class="fas fa-eye" style="color: #e76f51; margin-right: 10px;"></i> Vision</h3>
+                        <p style="font-size: 15px; line-height: 1.7; color: #555;">To be Southern Africa's most trusted safari operator, recognized for authentic experiences, conservation leadership, and meaningful community partnerships.</p>
                     </div>
-                    <div class="history-box">
-                        <h3><i class="fas fa-clock"></i> History</h3>
-                        <p>Mosepele was founded in 2015 by Bobby Kokome, a Maun-born safari guide with deep roots in Botswana's tourism industry. What began as small walking safaris has grown into a full-service safari company offering experiences across all of Botswana's iconic wilderness areas.</p>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 10px;"><i class="fas fa-clock" style="color: #e76f51; margin-right: 10px;"></i> History</h3>
+                        <p style="font-size: 15px; line-height: 1.7; color: #555;">Mosepele was founded in 2015 by Bobby Kokome, a Maun-born safari guide with deep roots in Botswana's tourism industry. What began as small walking safaris has grown into a full-service safari company offering experiences across all of Botswana's iconic wilderness areas.</p>
                     </div>
                 </div>
                 
-                <div class="overview-stats" data-aos="fade-left" data-aos-duration="600">
-                    <div class="quote-card">
-                        <i class="fas fa-quote-left"></i>
-                        <p>"Mosepele means 'journey' in Setswana. We chose this name because every safari is more than a trip it's a transformative journey through one of Africa's last great wilderness areas."</p>
-                        <h4>— Bobby Kokome, Founder</h4>
+                <div data-aos="fade-left" data-aos-duration="600">
+                    <div style="background-color: #fdf8f0; padding: 30px; border-radius: 12px; border-left: 4px solid #d4a373; margin-bottom: 30px;">
+                        <i class="fas fa-quote-left" style="font-size: 28px; color: #d4a373; margin-bottom: 15px; display: block;"></i>
+                        <p style="font-size: 18px; font-style: italic; color: #444; line-height: 1.6; margin-bottom: 15px;">"Mosepele means 'journey' in Setswana. We chose this name because every safari is more than a trip - it's a transformative journey through one of Africa's last great wilderness areas."</p>
+                        <h4 style="font-size: 16px; font-weight: 600; color: #355e3b;">— Bobby Kokome, Founder</h4>
                     </div>
                     
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-number">12+</div>
-                            <div class="stat-label">Years Operating</div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                        <div style="background-color: white; padding: 20px; text-align: center; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                            <div style="font-size: 32px; font-weight: 700; color: #e76f51; margin-bottom: 5px;">12+</div>
+                            <div style="font-size: 12px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Years Operating</div>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-number">5,000+</div>
-                            <div class="stat-label">Travelers Hosted</div>
+                        <div style="background-color: white; padding: 20px; text-align: center; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                            <div style="font-size: 32px; font-weight: 700; color: #e76f51; margin-bottom: 5px;">5,000+</div>
+                            <div style="font-size: 12px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Travelers Hosted</div>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-number">4.9</div>
-                            <div class="stat-label">Average Rating</div>
+                        <div style="background-color: white; padding: 20px; text-align: center; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                            <div style="font-size: 32px; font-weight: 700; color: #e76f51; margin-bottom: 5px;">4.9</div>
+                            <div style="font-size: 12px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Average Rating</div>
                         </div>
                     </div>
                 </div>
@@ -96,91 +97,99 @@
     </section>
 
     <!-- CORE VALUES SECTION -->
-    <section class="core-values">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-duration="600">
-                <h2>Our Core Values</h2>
-                <p>The principles that guide every safari, every interaction, and every decision we make</p>
+    <section class="core-values" style="padding: 80px 20px; background-color: #fdf8f0;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-up" data-aos-duration="600">
+                <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: #355e3b; margin-bottom: 15px;">Our Core Values</h2>
+                <p style="font-size: 16px; color: #666; max-width: 600px; margin: 0 auto;">The principles that guide every safari, every interaction, and every decision we make</p>
             </div>
-            <div class="values-grid">
-                <div class="value-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
-                    <div class="value-icon">
-                        <i class="fas fa-shield-alt"></i>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div style="background-color: white; padding: 30px; text-align: center; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s;" data-aos="fade-up" data-aos-duration="500">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 70px; height: 70px; background-color: #d4a37320; border-radius: 50%; margin-bottom: 20px;">
+                        <i class="fas fa-shield-alt" style="font-size: 32px; color: #355e3b;"></i>
                     </div>
-                    <h3>Safety & Excellence</h3>
-                    <p>Uncompromising standards in guide training, vehicle maintenance, and guest welfare</p>
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Safety & Excellence</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.6;">Uncompromising standards in guide training, vehicle maintenance, and guest welfare</p>
                 </div>
-                <div class="value-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    <div class="value-icon">
-                        <i class="fas fa-handshake"></i>
+                
+                <div style="background-color: white; padding: 30px; text-align: center; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s;" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 70px; height: 70px; background-color: #d4a37320; border-radius: 50%; margin-bottom: 20px;">
+                        <i class="fas fa-handshake" style="font-size: 32px; color: #355e3b;"></i>
                     </div>
-                    <h3>Community Partnership</h3>
-                    <p>Supporting local villages through employment, education, and sustainable tourism revenue</p>
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Community Partnership</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.6;">Supporting local villages through employment, education, and sustainable tourism revenue</p>
                 </div>
-                <div class="value-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                    <div class="value-icon">
-                        <i class="fas fa-leaf"></i>
+                
+                <div style="background-color: white; padding: 30px; text-align: center; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s;" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 70px; height: 70px; background-color: #d4a37320; border-radius: 50%; margin-bottom: 20px;">
+                        <i class="fas fa-leaf" style="font-size: 32px; color: #355e3b;"></i>
                     </div>
-                    <h3>Sustainability</h3>
-                    <p>Carbon-neutral safaris, zero single-use plastic, and active wildlife conservation support</p>
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Sustainability</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.6;">Carbon-neutral safaris, zero single-use plastic, and active wildlife conservation support</p>
                 </div>
-                <div class="value-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-                    <div class="value-icon">
-                        <i class="fas fa-heart"></i>
+                
+                <div style="background-color: white; padding: 30px; text-align: center; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s;" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 70px; height: 70px; background-color: #d4a37320; border-radius: 50%; margin-bottom: 20px;">
+                        <i class="fas fa-heart" style="font-size: 32px; color: #355e3b;"></i>
                     </div>
-                    <h3>Authentic Experiences</h3>
-                    <p>Deep cultural connections and genuine wildlife encounters, not staged performances</p>
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Authentic Experiences</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.6;">Deep cultural connections and genuine wildlife encounters, not staged performances</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- MEET THE TEAM SECTION -->
-    <section class="team-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-duration="600">
-                <h2>Meet the Team</h2>
-                <p>Passionate Botswana locals dedicated to sharing our homeland with the world</p>
+    <section class="team-section" style="padding: 80px 20px; background-color: white;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-up" data-aos-duration="600">
+                <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: #355e3b; margin-bottom: 15px;">Meet the Team</h2>
+                <p style="font-size: 16px; color: #666; max-width: 600px; margin: 0 auto;">Passionate Botswana locals dedicated to sharing our homeland with the world</p>
             </div>
-            <div class="team-grid">
-                <div class="team-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1603703199669-a45d36f54918?w=400&h=400&fit=crop" alt="Kgosi Mogale">
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div style="background-color: #fdf8f0; border-radius: 12px; overflow: hidden; transition: transform 0.3s;" data-aos="fade-up" data-aos-duration="500">
+                    <div style="height: 280px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1603703199669-a45d36f54918?w=400&h=400&fit=crop" alt="Bobby Kokome" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                     </div>
-                    <div class="team-info">
-                        <h3>Bobby Kokome</h3>
-                        <p class="team-title">Founder & Lead Safari Guide</p>
-                        <p class="team-bio">Born in Maun, Kgosi has 25 years of guiding experience across Botswana's wilderness areas.</p>
-                    </div>
-                </div>
-                <div class="team-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1761078206756-68d3023f3021?w=400&h=400&fit=crop" alt="Naledi Seretse">
-                    </div>
-                    <div class="team-info">
-                        <h3>Maikano Mafala</h3>
-                        <p class="team-title">Operations Manager</p>
-                        <p class="team-bio">Tourism management specialist with a passion for sustainable travel and local community development.</p>
+                    <div style="padding: 20px; text-align: center;">
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; color: #355e3b; margin-bottom: 5px;">Bobby Kokome</h3>
+                        <p style="font-size: 13px; font-weight: 600; color: #d4a373; margin-bottom: 10px;">Founder & Lead Safari Guide</p>
+                        <p style="font-size: 13px; color: #666; line-height: 1.5;">Born in Maun, Bobby has 25 years of guiding experience across Botswana's wilderness areas.</p>
                     </div>
                 </div>
-                <div class="team-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1595652973888-c5677816f6f4?w=400&h=400&fit=crop" alt="Tebogo Nkosi">
+                
+                <div style="background-color: #fdf8f0; border-radius: 12px; overflow: hidden; transition: transform 0.3s;" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                    <div style="height: 280px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1761078206756-68d3023f3021?w=400&h=400&fit=crop" alt="Maikano Mafala" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                     </div>
-                    <div class="team-info">
-                        <h3>Mr Willard Phuthego</h3>
-                        <p class="team-title">Senior Safari Guide</p>
-                        <p class="team-bio">Specialized in bird identification and tracking. Grew up in the Okavango Delta region.</p>
+                    <div style="padding: 20px; text-align: center;">
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; color: #355e3b; margin-bottom: 5px;">Maikano Mafala</h3>
+                        <p style="font-size: 13px; font-weight: 600; color: #d4a373; margin-bottom: 10px;">Operations Manager</p>
+                        <p style="font-size: 13px; color: #666; line-height: 1.5;">Tourism management specialist with a passion for sustainable travel and local community development.</p>
                     </div>
                 </div>
-                <div class="team-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1760199078320-18976d421338?w=400&h=400&fit=crop" alt="Mpho Tlou">
+                
+                <div style="background-color: #fdf8f0; border-radius: 12px; overflow: hidden; transition: transform 0.3s;" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                    <div style="height: 280px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1595652973888-c5677816f6f4?w=400&h=400&fit=crop" alt="Willard Phuthego" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                     </div>
-                    <div class="team-info">
-                        <h3>Lesedi Phuthulogo</h3>
-                        <p class="team-title">Cultural Experience Coordinator</p>
-                        <p class="team-bio">Bridges connections between travelers and San Bushmen communities with deep cultural respect.</p>
+                    <div style="padding: 20px; text-align: center;">
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; color: #355e3b; margin-bottom: 5px;">Willard Phuthego</h3>
+                        <p style="font-size: 13px; font-weight: 600; color: #d4a373; margin-bottom: 10px;">Senior Safari Guide</p>
+                        <p style="font-size: 13px; color: #666; line-height: 1.5;">Specialized in bird identification and tracking. Grew up in the Okavango Delta region.</p>
+                    </div>
+                </div>
+                
+                <div style="background-color: #fdf8f0; border-radius: 12px; overflow: hidden; transition: transform 0.3s;" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                    <div style="height: 280px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1760199078320-18976d421338?w=400&h=400&fit=crop" alt="Lesedi Phuthulogo" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                    </div>
+                    <div style="padding: 20px; text-align: center;">
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; color: #355e3b; margin-bottom: 5px;">Lesedi Phuthulogo</h3>
+                        <p style="font-size: 13px; font-weight: 600; color: #d4a373; margin-bottom: 10px;">Cultural Experience Coordinator</p>
+                        <p style="font-size: 13px; color: #666; line-height: 1.5;">Bridges connections between travelers and San Bushmen communities with deep cultural respect.</p>
                     </div>
                 </div>
             </div>
@@ -188,25 +197,25 @@
     </section>
 
     <!-- SUSTAINABILITY COMMITMENT SECTION -->
-    <section class="sustainability">
-        <div class="container">
-            <div class="sustainability-grid">
-                <div class="sustainability-text" data-aos="fade-right" data-aos-duration="600">
-                    <h2>Our Sustainability Commitment</h2>
-                    <p class="sustainability-intro">Tourism done right protects wilderness, empowers communities, and creates lasting positive impact. We're committed to operating in ways that ensure Botswana's wildlife and culture thrive for generations.</p>
-                    <ul class="sustainability-list">
-                        <li><i class="fas fa-leaf"></i> All vehicles run on low-emission engines; carbon offset for every safari</li>
-                        <li><i class="fas fa-leaf"></i> Zero single-use plastic policy across all camps and tours</li>
-                        <li><i class="fas fa-leaf"></i> 10% of profits support Botswana Wildlife Conservation Trust</li>
-                        <li><i class="fas fa-leaf"></i> Employ only local guides and staff from neighboring communities</li>
-                        <li><i class="fas fa-leaf"></i> Solar power at all permanent camps</li>
-                        <li><i class="fas fa-leaf"></i> Water conservation and greywater recycling systems</li>
+    <section class="sustainability" style="padding: 80px 20px; background-color: #355e3b;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+                <div data-aos="fade-right" data-aos-duration="600">
+                    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: white; margin-bottom: 20px;">Our Sustainability Commitment</h2>
+                    <p style="font-size: 16px; color: #fdf8f0cc; line-height: 1.7; margin-bottom: 30px;">Tourism done right protects wilderness, empowers communities, and creates lasting positive impact. We're committed to operating in ways that ensure Botswana's wildlife and culture thrive for generations.</p>
+                    <ul style="list-style: none;">
+                        <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 15px; font-size: 14px; color: #fdf8f0cc;"><i class="fas fa-leaf" style="color: #d4a373; margin-top: 2px;"></i> All vehicles run on low-emission engines; carbon offset for every safari</li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 15px; font-size: 14px; color: #fdf8f0cc;"><i class="fas fa-leaf" style="color: #d4a373; margin-top: 2px;"></i> Zero single-use plastic policy across all camps and tours</li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 15px; font-size: 14px; color: #fdf8f0cc;"><i class="fas fa-leaf" style="color: #d4a373; margin-top: 2px;"></i> 10% of profits support Botswana Wildlife Conservation Trust</li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 15px; font-size: 14px; color: #fdf8f0cc;"><i class="fas fa-leaf" style="color: #d4a373; margin-top: 2px;"></i> Employ only local guides and staff from neighboring communities</li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 15px; font-size: 14px; color: #fdf8f0cc;"><i class="fas fa-leaf" style="color: #d4a373; margin-top: 2px;"></i> Solar power at all permanent camps</li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 15px; font-size: 14px; color: #fdf8f0cc;"><i class="fas fa-leaf" style="color: #d4a373; margin-top: 2px;"></i> Water conservation and greywater recycling systems</li>
                     </ul>
                 </div>
-                <div class="sustainability-image" data-aos="fade-left" data-aos-duration="600">
-                    <img src="https://images.unsplash.com/photo-1760199078571-7eb300d44fde?w=600&h=500&fit=crop" alt="Elephants in Botswana">
-                    <div class="image-caption">
-                        <p>Elephants in Chobe National Park</p>
+                <div data-aos="fade-left" data-aos-duration="600">
+                    <img src="https://images.unsplash.com/photo-1760199078571-7eb300d44fde?w=600&h=500&fit=crop" alt="Elephants in Botswana" style="width: 100%; border-radius: 12px; height: 400px; object-fit: cover;">
+                    <div style="text-align: center; margin-top: 12px;">
+                        <p style="font-size: 12px; color: #fdf8f0cc; font-style: italic;">Elephants in Chobe National Park</p>
                     </div>
                 </div>
             </div>
@@ -214,79 +223,81 @@
     </section>
 
     <!-- CTA SECTION -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content" data-aos="fade-up" data-aos-duration="600">
-                <h2>Ready to Experience Botswana?</h2>
-                <p>Let our team craft your perfect safari journey</p>
-                <a href="contact.html" class="btn-cta">Plan Your Safari</a>
-            </div>
+    <section class="cta-section" style="padding: 80px 20px; background-color: #fdf8f0;">
+        <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 700; color: #355e3b; margin-bottom: 15px;">Ready to Experience Botswana?</h2>
+            <p style="font-size: 18px; color: #666; margin-bottom: 30px;">Let our team craft your perfect safari journey</p>
+            <a href="contact.html" style="display: inline-block; background-color: #e76f51; color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">Plan Your Safari</a>
         </div>
     </section>
 
-<!-- FOOTER -->
-<footer class="footer" style="background-color: #2c2c2c; color: #ccc; padding: 50px 40px 20px;">
-    <div class="footer-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
-        
-        <!-- Column 1: About -->
-        <div class="footer-column">
-            <a href="index.html" style="text-decoration: none;">
-                <h3 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white; font-size: 24px;">Mosepele</h3>
-            </a>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Authentic Botswana safari experiences crafted by local experts.</p>
-            <p class="footer-email" style="font-size: 14px; line-height: 1.6; margin-bottom: 10px; color: #e76f51;">info@mosepele.co.bw</p>
-        </div>
-        <div class="footer-column">
-            <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Quick Links</h4>
-            <ul style="list-style: none;">
-                <li style="margin-bottom: 10px;"><a href="index.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Home</a></li>
-                <li style="margin-bottom: 10px;"><a href="Tours.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Tours</a></li>
-                <li style="margin-bottom: 10px;"><a href="AboutUs.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">About Us</a></li>
-                <li style="margin-bottom: 10px;"><a href="Blog.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Blog</a></li>
-                <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Contact</a></li>
-                <li style="margin-bottom: 10px;"><a href="feedback.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Feedback</a></li>
-                <li style="margin-bottom: 10px;"><a href="booking.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Book Now</a></li>
-                <li style="margin-bottom: 10px;"><a href="faq.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">FAQs</a></li>
-                <li style="margin-bottom: 10px;"><a href="privacy.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Privacy Policy</a></li>
-                <li style="margin-bottom: 10px;"><a href="terms.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Terms & Conditions</a></li>
-                <li style="margin-bottom: 10px;"><a href="sitemap.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Sitemap</a></li>
-            </ul>
-        </div>
-       
-         <!-- Column 3: Social Media (UPDATED - WORKING LINKS) -->
-        <div class="footer-column">
-            <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Follow Us</h4>
-            <div class="social-icons">
-                <!-- Facebook - REPLACE # with your Facebook URL -->
-                <a href="https://www.facebook.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
-                    <i class="fab fa-facebook-f"></i>
+    <!-- FOOTER -->
+    <footer class="footer" style="background-color: #2c2c2c; color: #ccc; padding: 50px 40px 20px;">
+        <div class="footer-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
+            
+            <!-- Column 1: About -->
+            <div class="footer-column">
+                <a href="index.html" style="text-decoration: none;">
+                    <h3 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white; font-size: 24px;">Mosepele</h3>
                 </a>
-                <!-- Instagram - REPLACE # with your Instagram URL -->
-                <a href="https://www.instagram.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <!-- YouTube - REPLACE # with your YouTube URL -->
-                <a href="https://www.youtube.com/@mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
-                    <i class="fab fa-youtube"></i>
-                </a>
+                <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Authentic Botswana safari experiences crafted by local experts.</p>
+                <p class="footer-email" style="font-size: 14px; line-height: 1.6; margin-bottom: 10px; color: #e76f51;">info@mosepele.co.bw</p>
+            </div>
+            
+            <!-- Column 2: Quick Links -->
+            <div class="footer-column">
+                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Quick Links</h4>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 10px;"><a href="index.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Home</a></li>
+                    <li style="margin-bottom: 10px;"><a href="Tours.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Tours</a></li>
+                    <li style="margin-bottom: 10px;"><a href="AboutUs.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">About Us</a></li>
+                    <li style="margin-bottom: 10px;"><a href="Blog.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Blog</a></li>
+                    <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Contact</a></li>
+                    <li style="margin-bottom: 10px;"><a href="booking.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Book Now</a></li>
+                    <li style="margin-bottom: 10px;"><a href="faq.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">FAQs</a></li>
+                    <li style="margin-bottom: 10px;"><a href="privacy.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Privacy Policy</a></li>
+                    <li style="margin-bottom: 10px;"><a href="terms.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Social Media -->
+            <div class="footer-column">
+                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Column 4: Newsletter -->
+            <div class="footer-column">
+                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Newsletter</h4>
+                <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Get travel inspiration and special offers</p>
+                <form class="newsletter-form" style="display: flex; flex-direction: column; gap: 10px;">
+                    <input type="email" placeholder="Your email address" style="padding: 10px; border: none; border-radius: 5px; font-family: 'Open Sans', sans-serif;">
+                    <button type="submit" style="background-color: #e76f51; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: 600;">Subscribe</button>
+                </form>
             </div>
         </div>
-        
-        <!-- Column 4: Newsletter -->
-        <div class="footer-column">
-            <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Newsletter</h4>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Get travel inspiration and special offers</p>
-            <form class="newsletter-form" style="display: flex; flex-direction: column; gap: 10px;">
-                <input type="email" placeholder="Your email address" style="padding: 10px; border: none; border-radius: 5px; font-family: 'Open Sans', sans-serif;">
-                <button type="submit" style="background-color: #e76f51; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: 600;">Subscribe</button>
-            </form>
+        <div class="footer-bottom" style="text-align: center; padding-top: 40px; margin-top: 40px; border-top: 1px solid #444; font-size: 12px;">
+            <p>&copy; 2026 Mosepele Travel & Tours. All rights reserved.</p>
         </div>
-    </div>
-    <div class="footer-bottom" style="text-align: center; padding-top: 40px; margin-top: 40px; border-top: 1px solid #444; font-size: 12px;">
-        <p>&copy; 2026 Mosepele Travel & Tours. All rights reserved.</p>
-    </div>
-</footer>
+    </footer>
 
-    <script src="script.js"></script>
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800
+        });
+    </script>
 </body>
 </html>
