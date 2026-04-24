@@ -25,12 +25,12 @@
 
     <!-- NAVBAR -->
     <div class="navbar">
-         <div class="logo">
-    <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
-        <img src="images/mosepele.png" alt="Mosepele Elephant Logo" width="40" height="40" style="object-fit: contain;">
-        <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: #355e3b; margin: 0; letter-spacing: 2px;">Mosepele Travel & Tours</h1>
-    </a>
-</div>
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                <img src="images/mosepele.png" alt="Mosepele Elephant Logo" width="40" height="40" style="object-fit: contain;">
+                <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: #355e3b; margin: 0; letter-spacing: 2px;">Mosepele Travel & Tours</h1>
+            </a>
+        </div>
         <nav>
             <a href="index.html">Home</a>
             <a href="Tours.html">Tours</a>
@@ -38,7 +38,6 @@
             <a href="Blog.html">Blog</a>
             <a href="contact.html">Contact</a>
             <a href="feedback.html">Feedback</a>
-            <a href="TourDetails.html">Tour Details</a>
             <a href="booking.html" class="btn-nav">Book Now</a>
         </nav>
     </div>
@@ -47,7 +46,7 @@
     <section id="tourHero" style="height: 60vh; background-size: cover; background-position: center; display: flex; align-items: flex-end; padding-bottom: 40px;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="tour-hero-content" data-aos="fade-up" data-aos-duration="600">
-                <span id="tourCategory" style="background-color: #E76F51; color: white; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; display: inline-block; margin-bottom: 15px;">Safari</span>
+                <span id="tourCategory" style="background-color: #E76F51; color: white; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; display: inline-block; margin-bottom: 15px;">Loading...</span>
                 <h1 id="tourTitle" style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: white; margin-bottom: 15px;">Loading...</h1>
                 <div style="display: flex; gap: 25px; flex-wrap: wrap;">
                     <span id="tourLocation" style="color: white;"><i class="fas fa-map-marker-alt" style="color: #D4A373; margin-right: 8px;"></i> Loading...</span>
@@ -129,57 +128,127 @@
     <footer class="footer" style="background-color: #2c2c2c; color: #ccc; padding: 50px 40px 20px;">
         <div class="footer-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
             <div class="footer-column"><a href="index.html"><h3 style="color: white;">Mosepele</h3></a><p>Authentic Botswana safari experiences.</p><p style="color: #e76f51;">info@mosepele.co.bw</p></div>
-            <div class="footer-column"><h4 style="color: white;">Quick Links</h4><ul style="list-style: none;"><li><a href="index.html" style="color: #ccc;">Home</a></li><li><a href="Tours.html" style="color: #ccc;">Tours</a></li><li><a href="AboutUs.html" style="color: #ccc;">About Us</a></li><li><a href="Blog.html" style="color: #ccc;">Blog</a></li><li><a href="contact.html" style="color: #ccc;">Contact</a></li><li><a href="booking.html" style="color: #ccc;">Book Now</a></li></ul></div>
+            <div class="footer-column"><h4 style="color: white;">Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="Tours.html">Tours</a></li><li><a href="AboutUs.html">About Us</a></li><li><a href="Blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li><li><a href="booking.html">Book Now</a></li></ul></div>
             <div class="footer-column"><h4 style="color: white;">Follow Us</h4><div><a href="https://www.facebook.com/mosepeletravel" target="_blank" style="color: #ccc; margin-right: 15px;"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/mosepeletravel" target="_blank" style="color: #ccc; margin-right: 15px;"><i class="fab fa-instagram"></i></a><a href="https://www.youtube.com/@mosepeletravel" target="_blank" style="color: #ccc;"><i class="fab fa-youtube"></i></a></div></div>
             <div class="footer-column"><h4 style="color: white;">Newsletter</h4><form><input type="email" placeholder="Your email address" style="padding: 10px; width: 100%; margin-bottom: 10px;"><button type="submit" style="background-color: #e76f51; color: white; padding: 10px; width: 100%; border: none;">Subscribe</button></form></div>
         </div>
-        <div class="footer-bottom" style="text-align: center; padding-top: 40px;"><p>&copy; 2026 Mosepele Travel & Tours.</p></div>
+        <div style="text-align: center; padding-top: 40px;"><p>&copy; 2026 Mosepele Travel & Tours.</p></div>
     </footer>
 
     <script>
-        // TOUR DATABASE
+        // TOUR DATABASE - ALL 6 TOURS
         const toursData = {
-            1: { title: "Okavango Delta Explorer", category: "Safari", location: "Okavango Delta, Botswana", duration: "5 Days / 4 Nights", groupSize: "Max 8 People", difficulty: "Easy", price: "P12,500", heroImage: "https://images.unsplash.com/photo-1627764409592-6c8e514e8ff5?w=1920&h=800&fit=crop", description: "Experience the magic of the Okavango Delta, one of Africa's last great wilderness areas.", highlights: ["Mokoro canoe excursions", "Game drives", "Walking safaris", "Bird watching"], itinerary: ["Day 1: Arrival in Maun", "Day 2: Mokoro Canoe Adventure", "Day 3: Walking Safari", "Day 4: Full Day Game Drive", "Day 5: Departure"], inclusions: ["Airport transfers", "Accommodation", "Meals", "Professional guide"], exclusions: ["Flights", "Insurance", "Visa fees"], tips: ["Pack neutral colors", "Bring sunscreen", "Camera"] },
-            2: { title: "Chobe Elephant Kingdom", category: "Safari", location: "Chobe National Park", duration: "4 Days / 3 Nights", groupSize: "Max 10 People", difficulty: "Easy", price: "P9,800", heroImage: "https://images.unsplash.com/photo-1665270409076-880b210fb0fb?w=1920&h=800&fit=crop", description: "Witness massive elephant herds along the Chobe River.", highlights: ["Boat cruise", "Elephant encounters", "Sunset drives"], itinerary: ["Day 1: Arrival", "Day 2: Full Day Safari", "Day 3: Chobe National Park", "Day 4: Departure"], inclusions: ["Transfers", "Accommodation", "Meals", "Guide"], exclusions: ["Flights", "Insurance"], tips: ["Binoculars", "Camera", "Sun hat"] },
-            3: { title: "Kalahari Cultural Journey", category: "Cultural", location: "Central Kalahari", duration: "3 Days / 2 Nights", groupSize: "Max 6 People", difficulty: "Moderate", price: "P7,200", heroImage: "https://images.unsplash.com/photo-1761078206756-68d3023f3021?w=1920&h=800&fit=crop", description: "Connect with San Bushmen culture and learn ancient survival skills.", highlights: ["San Bushmen experience", "Tracking skills", "Stargazing"], itinerary: ["Day 1: Arrival", "Day 2: Cultural Immersion", "Day 3: Departure"], inclusions: ["Cultural experience", "Accommodation", "Meals"], exclusions: ["Flights", "Insurance"], tips: ["Respect customs", "Ask before photos", "Warm jacket"] }
+            1: { 
+                title: "Okavango Delta Explorer", category: "Safari", location: "Okavango Delta, Botswana", 
+                duration: "5 Days / 4 Nights", groupSize: "Max 8 People", difficulty: "Easy", price: "P12,500", 
+                heroImage: "https://images.unsplash.com/photo-1627764409592-6c8e514e8ff5?w=1920&h=800&fit=crop", 
+                description: "Experience the magic of the Okavango Delta, one of Africa's last great wilderness areas. This 5-day safari takes you deep into the heart of the world's largest inland delta.", 
+                highlights: ["Mokoro canoe excursions", "Morning & afternoon game drives", "Walking safaris with armed guides", "Bird watching (over 400 species)", "Sunset boat cruise", "Visit to local village"],
+                itinerary: ["Day 1: Arrival in Maun", "Day 2: Mokoro Canoe Adventure", "Day 3: Walking Safari & Birding", "Day 4: Full Day Game Drive", "Day 5: Departure"],
+                inclusions: ["Airport transfers", "All accommodation", "All meals", "Professional guide", "Game drives", "Mokoro excursion", "Park fees"],
+                exclusions: ["International flights", "Travel insurance", "Visa fees", "Alcoholic beverages", "Gratuities"],
+                tips: ["Pack neutral colors", "Bring a hat and sunscreen", "Camera with zoom lens", "Binoculars", "Insect repellent"] 
+            },
+            2: { 
+                title: "Chobe Elephant Kingdom", category: "Safari", location: "Chobe National Park, Botswana", 
+                duration: "4 Days / 3 Nights", groupSize: "Max 10 People", difficulty: "Easy", price: "P9,800", 
+                heroImage: "https://images.unsplash.com/photo-1665270409076-880b210fb0fb?w=1920&h=800&fit=crop", 
+                description: "Witness massive elephant herds along the Chobe River in one of Africa's most spectacular wildlife destinations. Chobe National Park is home to over 50,000 elephants.", 
+                highlights: ["Boat cruise on Chobe River", "Elephant encounters", "Sunset safari drives", "Bird watching", "Photography hides"],
+                itinerary: ["Day 1: Arrival in Kasane", "Day 2: Full Day Safari", "Day 3: Chobe National Park", "Day 4: Departure"],
+                inclusions: ["Airport transfers", "All accommodation", "All meals", "Professional guide", "Boat cruises", "Game drives", "Park fees"],
+                exclusions: ["International flights", "Travel insurance", "Visa fees", "Alcoholic beverages", "Gratuities"],
+                tips: ["Bring binoculars", "Camera with zoom lens", "Neutral colored clothing", "Sun hat and sunscreen"] 
+            },
+            3: { 
+                title: "Kalahari Cultural Journey", category: "Cultural", location: "Central Kalahari, Botswana", 
+                duration: "3 Days / 2 Nights", groupSize: "Max 6 People", difficulty: "Moderate", price: "P7,200", 
+                heroImage: "https://images.unsplash.com/photo-1761078206756-68d3023f3021?w=1920&h=800&fit=crop", 
+                description: "Connect with San Bushmen culture and learn ancient survival skills in the vast Kalahari Desert.", 
+                highlights: ["San Bushmen cultural experience", "Traditional hunting demonstrations", "Bushman language lessons", "Stargazing in the Kalahari"],
+                itinerary: ["Day 1: Arrival", "Day 2: Cultural Immersion", "Day 3: Departure"],
+                inclusions: ["Cultural experiences", "All accommodation", "All meals", "San guide services", "Walking safaris", "Park fees"],
+                exclusions: ["International flights", "Travel insurance", "Visa fees", "Alcoholic beverages", "Gratuities"],
+                tips: ["Respect local customs", "Ask permission before taking photos", "Bring a good camera", "Warm jacket for cold nights"] 
+            },
+            4: { 
+                title: "Makgadikgadi Salt Pans Adventure", category: "Adventure", location: "Makgadikgadi Pans, Botswana", 
+                duration: "3 Days / 2 Nights", groupSize: "Max 8 People", difficulty: "Moderate", price: "P11,400", 
+                heroImage: "https://images.unsplash.com/photo-1760199078320-18976d421338?w=1920&h=800&fit=crop", 
+                description: "Explore vast salt flats and sleep under endless starry skies. The Makgadikgadi Pans are among the largest salt flats in the world.", 
+                highlights: ["Quad biking on salt pans", "Meerkat encounters", "Stargazing", "Visit to Kubu Island", "Flamingo watching"],
+                itinerary: ["Day 1: Arrival - Drive to the pans", "Day 2: Exploration - Quad biking across the pans", "Day 3: Departure - Morning meerkat encounter"],
+                inclusions: ["Quad biking", "All accommodation", "All meals", "Professional guide", "Park fees"],
+                exclusions: ["International flights", "Travel insurance", "Alcoholic beverages", "Gratuities"],
+                tips: ["Bring sunglasses (the salt is bright!)", "Sun hat and sunscreen", "Camera with wide-angle lens", "Warm clothing for night"] 
+            },
+            5: { 
+                title: "Moremi Game Reserve Safari", category: "Safari", location: "Moremi Game Reserve, Botswana", 
+                duration: "6 Days / 5 Nights", groupSize: "Max 8 People", difficulty: "Easy", price: "P21,800", 
+                heroImage: "https://images.unsplash.com/photo-1759215290881-cc6a8ccbb37e?w=1920&h=800&fit=crop", 
+                description: "Premium game viewing in one of Africa's most pristine reserves. Moremi covers parts of the Okavango Delta.", 
+                highlights: ["Big Five game viewing", "Night game drives", "Walking safaris", "Mokoro excursions", "Wild dog sightings"],
+                itinerary: ["Day 1: Arrival", "Day 2: Xakanaxa Region", "Day 3: Third Bridge", "Day 4: Khwai River", "Day 5: Full Day Safari", "Day 6: Departure"],
+                inclusions: ["Internal flights", "All accommodation", "All meals", "Professional guide", "Game drives", "Park fees"],
+                exclusions: ["International flights", "Travel insurance", "Visa fees", "Alcoholic beverages", "Gratuities"],
+                tips: ["Bring a good camera with zoom", "Neutral colored clothing", "Binoculars", "Sun protection"] 
+            },
+            6: { 
+                title: "Walking Safari Experience", category: "Adventure", location: "Multiple Locations, Botswana", 
+                duration: "5 Days / 4 Nights", groupSize: "Max 6 People", difficulty: "Challenging", price: "P16,500", 
+                heroImage: "https://images.unsplash.com/photo-1711062752040-8587e1a3b8e8?w=1920&h=800&fit=crop", 
+                description: "Immerse yourself in the bush with guided walking safaris. Experience the thrill of tracking wildlife on foot.", 
+                highlights: ["Guided bush walks", "Tracking skills workshop", "Bush survival skills", "Night walks", "Bird identification"],
+                itinerary: ["Day 1: Arrival", "Day 2: Tracking Day", "Day 3: Bush Survival", "Day 4: Night Walk", "Day 5: Departure"],
+                inclusions: ["Armed professional guides", "All accommodation", "All meals", "Tracking equipment", "Park fees"],
+                exclusions: ["International flights", "Travel insurance", "Alcoholic beverages", "Gratuities"],
+                tips: ["Good walking shoes (broken in)", "Long pants for bush walks", "Neutral colored clothing", "Sun hat and sunscreen"] 
+            }
         };
 
+        // Get tour ID from URL
         const urlParams = new URLSearchParams(window.location.search);
         let tourId = urlParams.get('id');
         if (!tourId || !toursData[tourId]) tourId = 1;
         const tour = toursData[tourId];
 
+        // Update page
         document.title = `${tour.title} - Mosepele`;
         document.getElementById('tourHero').style.background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${tour.heroImage}')`;
         document.getElementById('tourCategory').textContent = tour.category;
         document.getElementById('tourTitle').textContent = tour.title;
-        document.getElementById('tourLocation').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${tour.location}`;
-        document.getElementById('tourDuration').innerHTML = `<i class="far fa-clock"></i> ${tour.duration}`;
-        document.getElementById('tourGroupSize').innerHTML = `<i class="fas fa-users"></i> ${tour.groupSize}`;
-        document.getElementById('tourDifficulty').innerHTML = `<i class="fas fa-signal"></i> Difficulty: ${tour.difficulty}`;
+        document.getElementById('tourLocation').innerHTML = `<i class="fas fa-map-marker-alt" style="color: #D4A373;"></i> ${tour.location}`;
+        document.getElementById('tourDuration').innerHTML = `<i class="far fa-clock" style="color: #D4A373;"></i> ${tour.duration}`;
+        document.getElementById('tourGroupSize').innerHTML = `<i class="fas fa-users" style="color: #D4A373;"></i> ${tour.groupSize}`;
+        document.getElementById('tourDifficulty').innerHTML = `<i class="fas fa-signal" style="color: #D4A373;"></i> Difficulty: ${tour.difficulty}`;
         document.getElementById('tourDescription').textContent = tour.description;
         document.getElementById('desktopPrice').textContent = tour.price;
         if(document.getElementById('mobilePrice')) document.getElementById('mobilePrice').textContent = tour.price;
 
+        // Highlights
         const highlightsList = document.getElementById('highlightsList');
         highlightsList.innerHTML = '';
-        tour.highlights.forEach(h => { const li = document.createElement('li'); li.innerHTML = `<i class="fas fa-check"></i> ${h}`; highlightsList.appendChild(li); });
+        tour.highlights.forEach(h => { const li = document.createElement('li'); li.innerHTML = `<i class="fas fa-check" style="color: #E76F51;"></i> ${h}`; highlightsList.appendChild(li); });
 
+        // Itinerary
         const itineraryContent = document.getElementById('itineraryContent');
         itineraryContent.innerHTML = '';
         tour.itinerary.forEach(day => { const div = document.createElement('div'); div.style.padding = '15px'; div.style.marginBottom = '10px'; div.style.backgroundColor = '#FDF8F0'; div.style.borderRadius = '8px'; div.innerHTML = `<strong>${day}</strong>`; itineraryContent.appendChild(div); });
 
+        // Inclusions
         const inclusionsList = document.getElementById('inclusionsList');
         inclusionsList.innerHTML = '';
-        tour.inclusions.forEach(i => { const li = document.createElement('li'); li.innerHTML = `<i class="fas fa-check-circle"></i> ${i}`; inclusionsList.appendChild(li); });
+        tour.inclusions.forEach(i => { const li = document.createElement('li'); li.style.marginBottom = '10px'; li.innerHTML = `<i class="fas fa-check-circle" style="color: #2C5F2D;"></i> ${i}`; inclusionsList.appendChild(li); });
 
+        // Exclusions
         const exclusionsList = document.getElementById('exclusionsList');
         exclusionsList.innerHTML = '';
-        tour.exclusions.forEach(e => { const li = document.createElement('li'); li.innerHTML = `<i class="fas fa-times-circle"></i> ${e}`; exclusionsList.appendChild(li); });
+        tour.exclusions.forEach(e => { const li = document.createElement('li'); li.style.marginBottom = '10px'; li.innerHTML = `<i class="fas fa-times-circle" style="color: #E76F51;"></i> ${e}`; exclusionsList.appendChild(li); });
 
+        // Tips
         const tipsList = document.getElementById('tipsList');
         tipsList.innerHTML = '';
-        tour.tips.forEach(t => { const li = document.createElement('li'); li.innerHTML = `<i class="fas fa-lightbulb"></i> ${t}`; tipsList.appendChild(li); });
+        tour.tips.forEach(t => { const li = document.createElement('li'); li.style.marginBottom = '10px'; li.innerHTML = `<i class="fas fa-lightbulb" style="color: #2C5F2D;"></i> ${t}`; tipsList.appendChild(li); });
 
         // Tab functionality
         document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -191,7 +260,8 @@
             });
         });
 
-        document.getElementById('quickInquiryForm')?.addEventListener('submit', function(e) {
+        // Quick inquiry form
+        document.getElementById('quickInquiryForm').addEventListener('submit', function(e) {
             e.preventDefault();
             if(!document.getElementById('quickName').value || !document.getElementById('quickEmail').value) { alert('Please fill name and email'); return; }
             document.getElementById('quickInquirySuccess').style.display = 'block';
