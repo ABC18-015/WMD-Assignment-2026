@@ -33,12 +33,34 @@ body {
     flex-wrap: wrap;
 }
 
+/* Logo Styling - ONLY styles the text, does NOT change position */
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
 .logo h1 {
     font-family: 'Cormorant Garamond', serif;
-    color: #355e3b;
     font-size: 28px;
     font-weight: 700;
+    color: #355e3b;
+    margin: 0;
+    letter-spacing: 2px;
 }
+
+/* Decorative underline under the text only */
+.logo h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #355e3b, #e76f51, #355e3b);
+}
+
 
 .navbar nav a {
     margin-left: 20px;
