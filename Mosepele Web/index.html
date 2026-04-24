@@ -9,14 +9,17 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-     <!-- Bootstrap CSS-->
+    <!-- Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- Main Stylesheet (removed duplicate) -->
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -28,102 +31,101 @@
             </a>
         </div>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="Tours.html">Tours</a>
             <a href="AboutUs.html">About Us</a>
             <a href="Blog.html">Blog</a>
             <a href="contact.html">Contact</a>
             <a href="feedback.html">Feedback</a>
-            <a href="tour-detail.html" class="btn-nav">Tour Details</a>
             <a href="booking.html" class="btn-nav">Book Now</a>
-            
         </nav>
     </div>
 
     <!-- HERO SECTION -->
-    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1627764409592-6c8e514e8ff5?w=1920&h=800&fit=crop'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1627764409592-6c8e514e8ff5?w=1920&h=800&fit=crop'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;">
         <div class="hero-content">
-            <h1>Discover Botswana's Wild Heart</h1>
-            <p>Authentic safari and cultural experiences in Southern Africa's pristine wilderness</p>
-            <a href="Tours.html" class="btn-hero">Explore Our Tours</a>
+            <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 700; color: white; margin-bottom: 20px;">Discover Botswana's Wild Heart</h1>
+            <p style="font-family: 'Open Sans', sans-serif; font-size: 18px; color: white; margin-bottom: 30px;">Authentic safari and cultural experiences in Southern Africa's pristine wilderness</p>
+            <a href="Tours.html" class="btn-hero" style="font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 600; color: white; background-color: #e76f51; padding: 14px 32px; border-radius: 5px; text-decoration: none; display: inline-block;">Explore Our Tours</a>
         </div>
     </section>
 
     <!-- WELCOME SECTION -->
-    <section class="welcome">
-        <div class="container">
-            <h2>Welcome to Mosepele</h2>
-            <p class="welcome-text">Mosepele means "journey" in Setswana. We create authentic, eco-conscious safari experiences that connect you with Botswana's extraordinary wildlife and rich cultural heritage. Every journey is carefully crafted by local experts who know this land intimately.</p>
+    <section class="welcome" style="padding: 80px 20px; text-align: center; background-color: white;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: #355e3b; margin-bottom: 25px;">Welcome to Mosepele</h2>
+            <p class="welcome-text" style="font-family: 'Open Sans', sans-serif; font-size: 18px; line-height: 1.8; max-width: 900px; margin: 0 auto; color: #555;">Mosepele means "journey" in Setswana. We create authentic, eco-conscious safari experiences that connect you with Botswana's extraordinary wildlife and rich cultural heritage. Every journey is carefully crafted by local experts who know this land intimately.</p>
         </div>
     </section>
 
     <!-- POPULAR TOURS SECTION -->
-    <section class="popular-tours">
-        <div class="container">
-            <h2>Popular Safari Tours</h2>
-            <p class="section-subtitle">Hand-picked experiences showcasing the best of Botswana's wilderness</p>
+    <section class="popular-tours" style="padding: 80px 20px; background-color: #fdf8f0; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: #355e3b; margin-bottom: 15px;">Popular Safari Tours</h2>
+            <p class="section-subtitle" style="font-family: 'Open Sans', sans-serif; font-size: 16px; color: #777; margin-bottom: 40px;">Hand-picked experiences showcasing the best of Botswana's wilderness</p>
             
-            <div class="tour-categories">
-                <button class="category-btn active" data-category="all">All</button>
-                <button class="category-btn" data-category="safari">Safari</button>
-                <button class="category-btn" data-category="cultural">Cultural</button>
+            <div class="tour-categories" style="margin-bottom: 40px;">
+                <button class="category-btn active" data-category="all" style="background-color: #355e3b; color: white; border: none; padding: 8px 24px; margin: 0 8px; border-radius: 30px; cursor: pointer; font-weight: 600;">All</button>
+                <button class="category-btn" data-category="safari" style="background-color: transparent; border: 2px solid #355e3b; color: #355e3b; padding: 8px 24px; margin: 0 8px; border-radius: 30px; cursor: pointer; font-weight: 600;">Safari</button>
+                <button class="category-btn" data-category="cultural" style="background-color: transparent; border: 2px solid #355e3b; color: #355e3b; padding: 8px 24px; margin: 0 8px; border-radius: 30px; cursor: pointer; font-weight: 600;">Cultural</button>
             </div>
 
-            <div class="tours-grid">
+            <div class="tours-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 20px;">
+                
                 <!-- Tour Card 1 - Safari -->
-                <div class="tour-card" data-category="safari">
-                    <div class="tour-image">
-                        <img src="images/Okavango_Delta_074@2x.jpg" alt="Okavango Delta Explorer">
-                        <span class="tour-badge">Safari</span>
+                <div class="tour-card" data-category="safari" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                    <div class="tour-image" style="position: relative; height: 220px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1627764409592-6c8e514e8ff5?w=600&h=400&fit=crop" alt="Mokoro canoe navigating through crystal clear waters of Okavango Delta" width="600" height="400" style="width: 100%; height: 100%; object-fit: cover;">
+                        <span class="tour-badge" style="position: absolute; top: 15px; left: 15px; background-color: #e76f51; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">Safari</span>
                     </div>
-                    <div class="tour-info">
-                        <h3>Okavango Delta Explorer</h3>
-                        <div class="tour-meta">
-                            <span><i class="fas fa-calendar-alt"></i> 5 Days / 4 Nights</span>
-                            <span><i class="fas fa-users"></i> Max 8</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Okavango Delta</span>
+                    <div class="tour-info" style="padding: 20px; text-align: left;">
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Okavango Delta Explorer</h3>
+                        <div class="tour-meta" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 12px; font-size: 13px; color: #777;">
+                            <span><i class="fas fa-calendar-alt" style="color: #e76f51; margin-right: 5px;"></i> 5 Days / 4 Nights</span>
+                            <span><i class="fas fa-users" style="color: #e76f51; margin-right: 5px;"></i> Max 8</span>
+                            <span><i class="fas fa-map-marker-alt" style="color: #e76f51; margin-right: 5px;"></i> Okavango Delta</span>
                         </div>
-                        <p>Experience the world's largest inland delta by mokoro canoe and safari vehicle.</p>
-                        <div class="tour-price">From P12,500 <span>per person sharing</span></div>
-                        <a href="tour-detail.html?id=1" class="btn-view">View Tour</a>
+                        <p style="font-size: 14px; line-height: 1.6; color: #555; margin-bottom: 15px;">Experience the world's largest inland delta by mokoro canoe and safari vehicle.</p>
+                        <div class="tour-price" style="font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 15px;">From P12,500 <span style="font-size: 12px; font-weight: 400; color: #777;">per person sharing</span></div>
+                        <a href="tour-detail.html?id=1" class="btn-view" style="display: inline-block; background-color: transparent; border: 2px solid #e76f51; color: #e76f51; padding: 8px 20px; border-radius: 5px; text-decoration: none; font-weight: 600;">View Tour</a>
                     </div>
                 </div>
 
                 <!-- Tour Card 2 - Safari -->
-                <div class="tour-card" data-category="safari">
-                    <div class="tour-image">
-                        <img src="images/Khwai_Concession_001@2x.jpg" alt="Chobe Elephant Kingdom">
-                        <span class="tour-badge">Safari</span>
+                <div class="tour-card" data-category="safari" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                    <div class="tour-image" style="position: relative; height: 220px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1665270409076-880b210fb0fb?w=600&h=400&fit=crop" alt="Elephant herd walking along Chobe River at golden hour" width="600" height="400" style="width: 100%; height: 100%; object-fit: cover;">
+                        <span class="tour-badge" style="position: absolute; top: 15px; left: 15px; background-color: #e76f51; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">Safari</span>
                     </div>
-                    <div class="tour-info">
-                        <h3>Chobe Elephant Kingdom</h3>
-                        <div class="tour-meta">
-                            <span><i class="fas fa-calendar-alt"></i> 4 Days / 3 Nights</span>
-                            <span><i class="fas fa-users"></i> Max 10</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Chobe National Park</span>
+                    <div class="tour-info" style="padding: 20px; text-align: left;">
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Chobe Elephant Kingdom</h3>
+                        <div class="tour-meta" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 12px; font-size: 13px; color: #777;">
+                            <span><i class="fas fa-calendar-alt" style="color: #e76f51; margin-right: 5px;"></i> 4 Days / 3 Nights</span>
+                            <span><i class="fas fa-users" style="color: #e76f51; margin-right: 5px;"></i> Max 10</span>
+                            <span><i class="fas fa-map-marker-alt" style="color: #e76f51; margin-right: 5px;"></i> Chobe National Park</span>
                         </div>
-                        <p>Witness massive elephant herds along the Chobe River.</p>
-                        <div class="tour-price">From P9,800 <span>per person sharing</span></div>
-                        <a href="tour-detail.html?id=2" class="btn-view">View Tour</a>
+                        <p style="font-size: 14px; line-height: 1.6; color: #555; margin-bottom: 15px;">Witness massive elephant herds along the Chobe River.</p>
+                        <div class="tour-price" style="font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 15px;">From P9,800 <span style="font-size: 12px; font-weight: 400; color: #777;">per person sharing</span></div>
+                        <a href="tour-detail.html?id=2" class="btn-view" style="display: inline-block; background-color: transparent; border: 2px solid #e76f51; color: #e76f51; padding: 8px 20px; border-radius: 5px; text-decoration: none; font-weight: 600;">View Tour</a>
                     </div>
                 </div>
 
                 <!-- Tour Card 3 - Cultural -->
-                <div class="tour-card" data-category="cultural">
-                    <div class="tour-image">
-                        <img src="images/Khutse_Game_Reserve_ckgr.jpg" alt="Kalahari Cultural Journey">
-                        <span class="tour-badge">Cultural</span>
+                <div class="tour-card" data-category="cultural" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                    <div class="tour-image" style="position: relative; height: 220px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1761078206756-68d3023f3021?w=600&h=400&fit=crop" alt="San Bushmen hunter demonstrating traditional tracking skills in Kalahari Desert" width="600" height="400" style="width: 100%; height: 100%; object-fit: cover;">
+                        <span class="tour-badge" style="position: absolute; top: 15px; left: 15px; background-color: #e76f51; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">Cultural</span>
                     </div>
-                    <div class="tour-info">
-                        <h3>Kalahari Cultural Journey</h3>
-                        <div class="tour-meta">
-                            <span><i class="fas fa-calendar-alt"></i> 3 Days / 2 Nights</span>
-                            <span><i class="fas fa-users"></i> Max 6</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Central Kalahari</span>
+                    <div class="tour-info" style="padding: 20px; text-align: left;">
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Kalahari Cultural Journey</h3>
+                        <div class="tour-meta" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 12px; font-size: 13px; color: #777;">
+                            <span><i class="fas fa-calendar-alt" style="color: #e76f51; margin-right: 5px;"></i> 3 Days / 2 Nights</span>
+                            <span><i class="fas fa-users" style="color: #e76f51; margin-right: 5px;"></i> Max 6</span>
+                            <span><i class="fas fa-map-marker-alt" style="color: #e76f51; margin-right: 5px;"></i> Central Kalahari</span>
                         </div>
-                        <p>Connect with San Bushmen culture and learn ancient survival skills.</p>
-                        <div class="tour-price">From P7,200 <span>per person sharing</span></div>
-                        <a href="tour-detail.html?id=3" class="btn-view">View Tour</a>
+                        <p style="font-size: 14px; line-height: 1.6; color: #555; margin-bottom: 15px;">Connect with San Bushmen culture and learn ancient survival skills.</p>
+                        <div class="tour-price" style="font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 15px;">From P7,200 <span style="font-size: 12px; font-weight: 400; color: #777;">per person sharing</span></div>
+                        <a href="tour-detail.html?id=3" class="btn-view" style="display: inline-block; background-color: transparent; border: 2px solid #e76f51; color: #e76f51; padding: 8px 20px; border-radius: 5px; text-decoration: none; font-weight: 600;">View Tour</a>
                     </div>
                 </div>
             </div>
@@ -131,57 +133,43 @@
     </section>
 
     <!-- TESTIMONIALS SECTION -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>What Our Travelers Say</h2>
-            <p class="section-subtitle">Real experiences from guests who've explored Botswana with us</p>
+    <section class="testimonials" style="padding: 80px 20px; background-color: white; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: #355e3b; margin-bottom: 15px;">What Our Travelers Say</h2>
+            <p class="section-subtitle" style="font-family: 'Open Sans', sans-serif; font-size: 16px; color: #777; margin-bottom: 40px;">Real experiences from guests who've explored Botswana with us</p>
             
-            <div class="testimonials-grid">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                
+                <div class="testimonial-card" style="background-color: #fdf8f0; padding: 30px; border-radius: 12px; text-align: left;">
+                    <div class="rating" style="margin-bottom: 15px;">
+                        <i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i>
                     </div>
-                    <p class="testimonial-text">"The Okavango Delta experience exceeded all expectations. Our guide was incredibly knowledgeable and passionate."</p>
+                    <p class="testimonial-text" style="font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 20px; font-style: italic;">"The Okavango Delta experience exceeded all expectations. Our guide was incredibly knowledgeable and passionate."</p>
                     <div class="testimonial-author">
-                        <h4>James Mokani</h4>
-                        <span>Lusaka, Zambia</span>
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #355e3b; margin-bottom: 5px;">James Mokani</h4>
+                        <span style="font-size: 13px; color: #888;">Lusaka, Zambia</span>
                     </div>
                 </div>
 
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="testimonial-card" style="background-color: #fdf8f0; padding: 30px; border-radius: 12px; text-align: left;">
+                    <div class="rating" style="margin-bottom: 15px;">
+                        <i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i>
                     </div>
-                    <p class="testimonial-text">"Best safari experience in Southern Africa. Mosepele's commitment to sustainability is truly impressive."</p>
+                    <p class="testimonial-text" style="font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 20px; font-style: italic;">"Best safari experience in Southern Africa. Mosepele's commitment to sustainability is truly impressive."</p>
                     <div class="testimonial-author">
-                        <h4>Sarah Motcher</h4>
-                        <span>Cape Town, South Africa</span>
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #355e3b; margin-bottom: 5px;">Sarah Motcher</h4>
+                        <span style="font-size: 13px; color: #888;">Cape Town, South Africa</span>
                     </div>
                 </div>
 
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="testimonial-card" style="background-color: #fdf8f0; padding: 30px; border-radius: 12px; text-align: left;">
+                    <div class="rating" style="margin-bottom: 15px;">
+                        <i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i>
                     </div>
-                    <p class="testimonial-text">"Unforgettable wildlife encounters and luxurious camps. The Chobe elephants were absolutely magnificent!"</p>
+                    <p class="testimonial-text" style="font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 20px; font-style: italic;">"Unforgettable wildlife encounters and luxurious camps. The Chobe elephants were absolutely magnificent!"</p>
                     <div class="testimonial-author">
-                        <h4>David Chen</h4>
-                        <span>San Francisco, USA</span>
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #355e3b; margin-bottom: 5px;">David Chen</h4>
+                        <span style="font-size: 13px; color: #888;">San Francisco, USA</span>
                     </div>
                 </div>
             </div>
@@ -189,98 +177,146 @@
     </section>
 
     <!-- WHY CHOOSE US SECTION -->
-    <section class="why-choose-us">
-        <div class="container">
-            <h2>Why Choose Mosepele</h2>
-            <div class="features-grid">
+    <section class="why-choose-us" style="padding: 80px 20px; background-color: #fdf8f0; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: #355e3b; margin-bottom: 50px;">Why Choose Mosepele</h2>
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
                 <div class="feature">
-                    <i class="fas fa-user-tie"></i>
-                    <h3>Expert Local Guides</h3>
-                    <p>Knowledgeable guides born and raised in Botswana</p>
+                    <i class="fas fa-user-tie" style="font-size: 48px; color: #e76f51; margin-bottom: 20px;"></i>
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Expert Local Guides</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.6;">Knowledgeable guides born and raised in Botswana</p>
                 </div>
                 <div class="feature">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Eco-Friendly Travel</h3>
-                    <p>Sustainable practices protecting wildlife and habitats</p>
+                    <i class="fas fa-leaf" style="font-size: 48px; color: #e76f51; margin-bottom: 20px;"></i>
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Eco-Friendly Travel</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.6;">Sustainable practices protecting wildlife and habitats</p>
                 </div>
                 <div class="feature">
-                    <i class="fas fa-headset"></i>
-                    <h3>24/7 Support</h3>
-                    <p>Round-the-clock assistance during your journey</p>
+                    <i class="fas fa-headset" style="font-size: 48px; color: #e76f51; margin-bottom: 20px;"></i>
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">24/7 Support</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.6;">Round-the-clock assistance during your journey</p>
                 </div>
                 <div class="feature">
-                    <i class="fas fa-pen-fancy"></i>
-                    <h3>Custom Itineraries</h3>
-                    <p>Tailored experiences designed just for you</p>
+                    <i class="fas fa-pen-fancy" style="font-size: 48px; color: #e76f51; margin-bottom: 20px;"></i>
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Custom Itineraries</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.6;">Tailored experiences designed just for you</p>
                 </div>
             </div>
         </div>
     </section>
-<!-- FOOTER -->
-<footer class="footer" style="background-color: #2c2c2c; color: #ccc; padding: 50px 40px 20px;">
-    <div class="footer-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
-        
-        <!-- Column 1: About -->
-        <div class="footer-column">
-            <a href="index.html" style="text-decoration: none;">
-                <h3 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white; font-size: 24px;">Mosepele</h3>
-            </a>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Authentic Botswana safari experiences crafted by local experts.</p>
-            <p class="footer-email" style="font-size: 14px; line-height: 1.6; margin-bottom: 10px; color: #e76f51;">info@mosepele.co.bw</p>
-        </div>
-        <div class="footer-column">
-            <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Quick Links</h4>
-            <ul style="list-style: none;">
-                <li style="margin-bottom: 10px;"><a href="index.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Home</a></li>
-                <li style="margin-bottom: 10px;"><a href="Tours.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Tours</a></li>
-                <li style="margin-bottom: 10px;"><a href="AboutUs.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">About Us</a></li>
-                <li style="margin-bottom: 10px;"><a href="Blog.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Blog</a></li>
-                <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Contact</a></li>
-                <li style="margin-bottom: 10px;"><a href="feedback.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Feedback</a></li>
-                <li style="margin-bottom: 10px;"><a href="booking.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Book Now</a></li>
-                <li style="margin-bottom: 10px;"><a href="faq.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">FAQs</a></li>
-                <li style="margin-bottom: 10px;"><a href="privacy.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Privacy Policy</a></li>
-                <li style="margin-bottom: 10px;"><a href="terms.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Terms & Conditions</a></li>
-                <li style="margin-bottom: 10px;"><a href="sitemap.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Sitemap</a></li>
-            </ul>
-        </div>
-       
-         <!-- Column 3: Social Media (UPDATED - WORKING LINKS) -->
-        <div class="footer-column">
-            <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Follow Us</h4>
-            <div class="social-icons">
-                <!-- Facebook - REPLACE # with your Facebook URL -->
-                <a href="https://www.facebook.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
-                    <i class="fab fa-facebook-f"></i>
+
+    <!-- FOOTER -->
+    <footer class="footer" style="background-color: #2c2c2c; color: #ccc; padding: 50px 40px 20px;">
+        <div class="footer-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
+            
+            <div class="footer-column">
+                <a href="index.html" style="text-decoration: none;">
+                    <h3 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white; font-size: 24px;">Mosepele</h3>
                 </a>
-                <!-- Instagram - REPLACE # with your Instagram URL -->
-                <a href="https://www.instagram.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <!-- YouTube - REPLACE # with your YouTube URL -->
-                <a href="https://www.youtube.com/@mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
-                    <i class="fab fa-youtube"></i>
-                </a>
+                <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Authentic Botswana safari experiences crafted by local experts.</p>
+                <p class="footer-email" style="font-size: 14px; line-height: 1.6; margin-bottom: 10px; color: #e76f51;">info@mosepele.co.bw</p>
+            </div>
+            
+            <div class="footer-column">
+                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Quick Links</h4>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 10px;"><a href="index.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Home</a></li>
+                    <li style="margin-bottom: 10px;"><a href="Tours.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Tours</a></li>
+                    <li style="margin-bottom: 10px;"><a href="AboutUs.html" style="color: #ccc; text-decoration: none; font-size: 14px;">About Us</a></li>
+                    <li style="margin-bottom: 10px;"><a href="Blog.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Blog</a></li>
+                    <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Contact</a></li>
+                    <li style="margin-bottom: 10px;"><a href="feedback.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Feedback</a></li>
+                    <li style="margin-bottom: 10px;"><a href="booking.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Book Now</a></li>
+                    <li style="margin-bottom: 10px;"><a href="faq.html" style="color: #ccc; text-decoration: none; font-size: 14px;">FAQs</a></li>
+                    <li style="margin-bottom: 10px;"><a href="privacy.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Privacy Policy</a></li>
+                    <li style="margin-bottom: 10px;"><a href="terms.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px;">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Newsletter</h4>
+                <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Get travel inspiration and special offers</p>
+                <form class="newsletter-form" style="display: flex; flex-direction: column; gap: 10px;">
+                    <input type="email" placeholder="Your email address" style="padding: 10px; border: none; border-radius: 5px; font-family: 'Open Sans', sans-serif;">
+                    <button type="submit" style="background-color: #e76f51; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: 600;">Subscribe</button>
+                </form>
             </div>
         </div>
-        
-        <!-- Column 4: Newsletter -->
-        <div class="footer-column">
-            <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Newsletter</h4>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Get travel inspiration and special offers</p>
-            <form class="newsletter-form" style="display: flex; flex-direction: column; gap: 10px;">
-                <input type="email" placeholder="Your email address" style="padding: 10px; border: none; border-radius: 5px; font-family: 'Open Sans', sans-serif;">
-                <button type="submit" style="background-color: #e76f51; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: 600;">Subscribe</button>
-            </form>
+        <div class="footer-bottom" style="text-align: center; padding-top: 40px; margin-top: 40px; border-top: 1px solid #444; font-size: 12px;">
+            <p>&copy; 2026 Mosepele Travel & Tours. All rights reserved.</p>
         </div>
-    </div>
-    <div class="footer-bottom" style="text-align: center; padding-top: 40px; margin-top: 40px; border-top: 1px solid #444; font-size: 12px;">
-        <p>&copy; 2026 Mosepele Travel & Tours. All rights reserved.</p>
-    </div>
-</footer>
+    </footer>
 
-    <script src="script.js"></script>
+    <!-- JavaScript for Tour Filtering -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.category-btn');
+            const tourCards = document.querySelectorAll('.tour-card');
+
+            function updateActiveButton(activeFilter) {
+                filterButtons.forEach(btn => {
+                    const filterValue = btn.getAttribute('data-category');
+                    if (filterValue === activeFilter) {
+                        btn.style.backgroundColor = '#355e3b';
+                        btn.style.color = 'white';
+                        btn.style.border = 'none';
+                    } else {
+                        btn.style.backgroundColor = 'transparent';
+                        btn.style.color = '#355e3b';
+                        btn.style.border = '2px solid #355e3b';
+                    }
+                });
+            }
+
+            function filterTours(category) {
+                tourCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (category === 'all' || cardCategory === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filterValue = this.getAttribute('data-category');
+                    updateActiveButton(filterValue);
+                    filterTours(filterValue);
+                });
+            });
+
+            // Initialize: show all tours
+            filterTours('all');
+        });
+    </script>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800
+        });
+    </script>
+    
     <!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
