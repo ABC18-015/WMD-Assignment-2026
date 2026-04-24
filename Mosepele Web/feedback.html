@@ -9,13 +9,17 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-     <!-- Bootstrap CSS-->
+    <!-- Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -32,10 +36,8 @@
             <a href="AboutUs.html">About Us</a>
             <a href="Blog.html">Blog</a>
             <a href="contact.html">Contact</a>
-            <a href="feedback.html">Feedback</a>
-            <a href="tour-detail.html" class="btn-nav">Tour Details</a>
+            <a href="feedback.html" class="active">Feedback</a>
             <a href="booking.html" class="btn-nav">Book Now</a>
-            
         </nav>
     </div>
 
@@ -129,7 +131,7 @@
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 15px;">
                             <div class="form-group">
                                 <label style="display: block; font-weight: 600; margin-bottom: 8px;">Guide Knowledge</label>
-                                <select style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                                <select id="guideKnowledge" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
                                     <option>Excellent</option>
                                     <option>Very Good</option>
                                     <option>Good</option>
@@ -139,7 +141,7 @@
                             </div>
                             <div class="form-group">
                                 <label style="display: block; font-weight: 600; margin-bottom: 8px;">Accommodation Quality</label>
-                                <select style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                                <select id="accommodationQuality" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
                                     <option>Excellent</option>
                                     <option>Very Good</option>
                                     <option>Good</option>
@@ -152,7 +154,7 @@
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                             <div class="form-group">
                                 <label style="display: block; font-weight: 600; margin-bottom: 8px;">Vehicle Comfort</label>
-                                <select style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                                <select id="vehicleComfort" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
                                     <option>Excellent</option>
                                     <option>Very Good</option>
                                     <option>Good</option>
@@ -162,7 +164,7 @@
                             </div>
                             <div class="form-group">
                                 <label style="display: block; font-weight: 600; margin-bottom: 8px;">Value for Money</label>
-                                <select style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                                <select id="valueForMoney" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
                                     <option>Excellent</option>
                                     <option>Very Good</option>
                                     <option>Good</option>
@@ -188,7 +190,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="recommend" style="display: block; font-weight: 600; margin-bottom: 8px;">Would you recommend Mosepele to others? <span style="color: #E76F51;">*</span></label>
+                            <label style="display: block; font-weight: 600; margin-bottom: 8px;">Would you recommend Mosepele to others? <span style="color: #E76F51;">*</span></label>
                             <div style="display: flex; gap: 20px;">
                                 <label><input type="radio" name="recommend" value="yes" required> Definitely Yes</label>
                                 <label><input type="radio" name="recommend" value="maybe"> Probably Yes</label>
@@ -214,106 +216,149 @@
     </section>
 
     <!-- FOOTER -->
-<footer class="footer" style="background-color: #2c2c2c; color: #ccc; padding: 50px 40px 20px;">
-    <div class="footer-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
-        
-        <!-- Column 1: About -->
-        <div class="footer-column">
-            <a href="index.html" style="text-decoration: none;">
-                <h3 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white; font-size: 24px;">Mosepele</h3>
-            </a>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Authentic Botswana safari experiences crafted by local experts.</p>
-            <p class="footer-email" style="font-size: 14px; line-height: 1.6; margin-bottom: 10px; color: #e76f51;">info@mosepele.co.bw</p>
-        </div>
-        <div class="footer-column">
-            <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Quick Links</h4>
-            <ul style="list-style: none;">
-                <li style="margin-bottom: 10px;"><a href="index.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Home</a></li>
-                <li style="margin-bottom: 10px;"><a href="Tours.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Tours</a></li>
-                <li style="margin-bottom: 10px;"><a href="AboutUs.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">About Us</a></li>
-                <li style="margin-bottom: 10px;"><a href="Blog.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Blog</a></li>
-                <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Contact</a></li>
-                <li style="margin-bottom: 10px;"><a href="feedback.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Feedback</a></li>
-                <li style="margin-bottom: 10px;"><a href="booking.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Book Now</a></li>
-                <li style="margin-bottom: 10px;"><a href="faq.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">FAQs</a></li>
-                <li style="margin-bottom: 10px;"><a href="privacy.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Privacy Policy</a></li>
-                <li style="margin-bottom: 10px;"><a href="terms.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Terms & Conditions</a></li>
-                <li style="margin-bottom: 10px;"><a href="sitemap.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Sitemap</a></li>
-            </ul>
-        </div>
-       <!-- Column 3: Social Media (UPDATED - WORKING LINKS) -->
-        <div class="footer-column">
-            <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Follow Us</h4>
-            <div class="social-icons">
-                <!-- Facebook - REPLACE # with your Facebook URL -->
-                <a href="https://www.facebook.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
-                    <i class="fab fa-facebook-f"></i>
+    <footer class="footer" style="background-color: #2c2c2c; color: #ccc; padding: 50px 40px 20px;">
+        <div class="footer-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
+            
+            <div class="footer-column">
+                <a href="index.html" style="text-decoration: none;">
+                    <h3 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white; font-size: 24px;">Mosepele</h3>
                 </a>
-                <!-- Instagram - REPLACE # with your Instagram URL -->
-                <a href="https://www.instagram.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <!-- YouTube - REPLACE # with your YouTube URL -->
-                <a href="https://www.youtube.com/@mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
-                    <i class="fab fa-youtube"></i>
-                </a>
+                <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Authentic Botswana safari experiences crafted by local experts.</p>
+                <p class="footer-email" style="font-size: 14px; line-height: 1.6; margin-bottom: 10px; color: #e76f51;">info@mosepele.co.bw</p>
+            </div>
+            
+            <div class="footer-column">
+                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Quick Links</h4>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 10px;"><a href="index.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Home</a></li>
+                    <li style="margin-bottom: 10px;"><a href="Tours.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Tours</a></li>
+                    <li style="margin-bottom: 10px;"><a href="AboutUs.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">About Us</a></li>
+                    <li style="margin-bottom: 10px;"><a href="Blog.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Blog</a></li>
+                    <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Contact</a></li>
+                    <li style="margin-bottom: 10px;"><a href="feedback.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Feedback</a></li>
+                    <li style="margin-bottom: 10px;"><a href="booking.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Book Now</a></li>
+                    <li style="margin-bottom: 10px;"><a href="faq.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">FAQs</a></li>
+                    <li style="margin-bottom: 10px;"><a href="privacy.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Privacy Policy</a></li>
+                    <li style="margin-bottom: 10px;"><a href="terms.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Terms & Conditions</a></li>
+                    <li style="margin-bottom: 10px;"><a href="sitemap.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Sitemap</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Newsletter</h4>
+                <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Get travel inspiration and special offers</p>
+                <form class="newsletter-form" style="display: flex; flex-direction: column; gap: 10px;">
+                    <input type="email" placeholder="Your email address" style="padding: 10px; border: none; border-radius: 5px; font-family: 'Open Sans', sans-serif;">
+                    <button type="submit" style="background-color: #e76f51; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: 600;">Subscribe</button>
+                </form>
             </div>
         </div>
-        
-        <!-- Column 4: Newsletter -->
-        <div class="footer-column">
-            <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Newsletter</h4>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Get travel inspiration and special offers</p>
-            <form class="newsletter-form" style="display: flex; flex-direction: column; gap: 10px;">
-                <input type="email" placeholder="Your email address" style="padding: 10px; border: none; border-radius: 5px; font-family: 'Open Sans', sans-serif;">
-                <button type="submit" style="background-color: #e76f51; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: 600;">Subscribe</button>
-            </form>
+        <div class="footer-bottom" style="text-align: center; padding-top: 40px; margin-top: 40px; border-top: 1px solid #444; font-size: 12px;">
+            <p>&copy; 2026 Mosepele Travel & Tours. All rights reserved.</p>
         </div>
-    </div>
-    <div class="footer-bottom" style="text-align: center; padding-top: 40px; margin-top: 40px; border-top: 1px solid #444; font-size: 12px;">
-        <p>&copy; 2026 Mosepele Travel & Tours. All rights reserved.</p>
-    </div>
-</footer>
+    </footer>
 
-
+    <!-- JavaScript for Form Validation -->
     <script>
-        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        document.addEventListener('DOMContentLoaded', function() {
+            const feedbackForm = document.getElementById('feedbackForm');
+            const feedbackSuccess = document.getElementById('feedbackSuccess');
+            const travelDateInput = document.getElementById('travelDate');
             
-            // Simple validation
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            const email = document.getElementById('email').value;
-            const tour = document.getElementById('tourTaken').value;
-            const likedMost = document.getElementById('likedMost').value;
+            // Set max date to today for travel date (can't select future dates for feedback)
+            const today = new Date().toISOString().split('T')[0];
+            travelDateInput.setAttribute('max', today);
             
-            if (!firstName || !lastName || !email || !tour || !likedMost) {
-                alert('Please fill in all required fields marked with *');
-                return;
-            }
-            
-            if (!email.includes('@') || !email.includes('.')) {
-                alert('Please enter a valid email address');
-                return;
-            }
-            
-            // Show success message
-            document.getElementById('feedbackForm').style.display = 'none';
-            document.getElementById('feedbackSuccess').style.display = 'block';
-            
-            // Log to console (for demo)
-            console.log('Feedback submitted:', {
-                name: firstName + ' ' + lastName,
-                email: email,
-                tour: tour
+            feedbackForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const firstName = document.getElementById('firstName').value.trim();
+                const lastName = document.getElementById('lastName').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const tour = document.getElementById('tourTaken').value;
+                const likedMost = document.getElementById('likedMost').value.trim();
+                const overallRating = document.querySelector('input[name="overallRating"]:checked');
+                
+                // Validation
+                if (!firstName) {
+                    alert('Please enter your first name');
+                    return;
+                }
+                
+                if (!lastName) {
+                    alert('Please enter your last name');
+                    return;
+                }
+                
+                if (!email) {
+                    alert('Please enter your email address');
+                    return;
+                }
+                
+                if (!email.includes('@') || !email.includes('.')) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+                
+                if (!tour) {
+                    alert('Please select which tour you took');
+                    return;
+                }
+                
+                if (!likedMost) {
+                    alert('Please tell us what you liked most about your experience');
+                    return;
+                }
+                
+                if (!overallRating) {
+                    alert('Please rate your overall experience');
+                    return;
+                }
+                
+                // Show success message
+                feedbackForm.style.display = 'none';
+                feedbackSuccess.style.display = 'block';
+                
+                // Log to console (for demo purposes)
+                console.log('Feedback Submitted Successfully!');
+                console.log('Name:', firstName, lastName);
+                console.log('Email:', email);
+                console.log('Tour:', tour);
+                console.log('Rating:', overallRating.value);
+                console.log('Liked Most:', likedMost);
+                
+                // Scroll to success message
+                feedbackSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
         });
-        
-        // Set max date to today for travel date
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('travelDate').setAttribute('max', today);
     </script>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800
+        });
+    </script>
+    
     <!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
