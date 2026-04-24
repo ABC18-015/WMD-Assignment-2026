@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour Detail - Mosepele Travel & Tours</title>
+    <title>Mosepele Travel & Tours - Authentic Botswana Safaris</title>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-     <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -31,7 +31,7 @@
             </a>
         </div>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="Tours.html">Tours</a>
             <a href="AboutUs.html">About Us</a>
             <a href="Blog.html">Blog</a>
@@ -41,679 +41,269 @@
         </nav>
     </div>
 
-    <!-- TOUR HERO SECTION (Dynamic) -->
-    <section class="tour-hero" id="tourHero" style="height: 60vh; background-size: cover; background-position: center; display: flex; align-items: flex-end; padding-bottom: 40px;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <div class="tour-hero-content" data-aos="fade-up" data-aos-duration="600">
-                <span class="tour-category" id="tourCategory" style="background-color: #E76F51; color: white; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; display: inline-block; margin-bottom: 15px;">Safari</span>
-                <h1 id="tourTitle" style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 700; color: white; margin-bottom: 15px;">Okavango Delta Explorer</h1>
-                <div style="display: flex; gap: 25px; flex-wrap: wrap;">
-                    <span id="tourLocation" style="color: white;"><i class="fas fa-map-marker-alt" style="color: #D4A373; margin-right: 8px;"></i> Okavango Delta, Botswana</span>
-                    <span id="tourDuration" style="color: white;"><i class="far fa-clock" style="color: #D4A373; margin-right: 8px;"></i> 5 Days / 4 Nights</span>
-                    <span id="tourGroupSize" style="color: white;"><i class="fas fa-users" style="color: #D4A373; margin-right: 8px;"></i> Max 8 People</span>
-                    <span id="tourDifficulty" style="color: white;"><i class="fas fa-signal" style="color: #D4A373; margin-right: 8px;"></i> Difficulty: Easy</span>
+    <!-- HERO SECTION -->
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1627764409592-6c8e514e8ff5?w=1920&h=800&fit=crop'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="hero-content">
+            <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 700; color: white; margin-bottom: 20px;">Discover Botswana's Wild Heart</h1>
+            <p style="font-family: 'Open Sans', sans-serif; font-size: 18px; color: white; margin-bottom: 30px;">Authentic safari and cultural experiences in Southern Africa's pristine wilderness</p>
+            <a href="Tours.html" class="btn-hero" style="font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 600; color: white; background-color: #e76f51; padding: 14px 32px; border-radius: 5px; text-decoration: none; display: inline-block;">Explore Our Tours</a>
+        </div>
+    </section>
+
+    <!-- WELCOME SECTION -->
+    <section class="welcome" style="padding: 80px 20px; text-align: center; background-color: white;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: #355e3b; margin-bottom: 25px;">Welcome to Mosepele</h2>
+            <p class="welcome-text" style="font-family: 'Open Sans', sans-serif; font-size: 18px; line-height: 1.8; max-width: 900px; margin: 0 auto; color: #555;">Mosepele means "journey" in Setswana. We create authentic, eco-conscious safari experiences that connect you with Botswana's extraordinary wildlife and rich cultural heritage. Every journey is carefully crafted by local experts who know this land intimately.</p>
+        </div>
+    </section>
+
+    <!-- POPULAR TOURS SECTION -->
+    <section class="popular-tours" style="padding: 80px 20px; background-color: #fdf8f0; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: #355e3b; margin-bottom: 15px;">Popular Safari Tours</h2>
+            <p class="section-subtitle" style="font-family: 'Open Sans', sans-serif; font-size: 16px; color: #777; margin-bottom: 40px;">Hand-picked experiences showcasing the best of Botswana's wilderness</p>
+            
+            <div class="tour-categories" style="margin-bottom: 40px;">
+                <button class="category-btn active" data-category="all" style="background-color: #355e3b; color: white; border: none; padding: 8px 24px; margin: 0 8px; border-radius: 30px; cursor: pointer; font-weight: 600;">All</button>
+                <button class="category-btn" data-category="safari" style="background-color: transparent; border: 2px solid #355e3b; color: #355e3b; padding: 8px 24px; margin: 0 8px; border-radius: 30px; cursor: pointer; font-weight: 600;">Safari</button>
+                <button class="category-btn" data-category="cultural" style="background-color: transparent; border: 2px solid #355e3b; color: #355e3b; padding: 8px 24px; margin: 0 8px; border-radius: 30px; cursor: pointer; font-weight: 600;">Cultural</button>
+            </div>
+
+            <div class="tours-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 20px;">
+                
+                <!-- Tour Card 1 - Safari -->
+                <div class="tour-card" data-category="safari" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                    <div class="tour-image" style="position: relative; height: 220px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1627764409592-6c8e514e8ff5?w=600&h=400&fit=crop" alt="Mokoro canoe navigating through crystal clear waters of Okavango Delta" width="600" height="400" style="width: 100%; height: 100%; object-fit: cover;">
+                        <span class="tour-badge" style="position: absolute; top: 15px; left: 15px; background-color: #e76f51; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">Safari</span>
+                    </div>
+                    <div class="tour-info" style="padding: 20px; text-align: left;">
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Okavango Delta Explorer</h3>
+                        <div class="tour-meta" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 12px; font-size: 13px; color: #777;">
+                            <span><i class="fas fa-calendar-alt" style="color: #e76f51; margin-right: 5px;"></i> 5 Days / 4 Nights</span>
+                            <span><i class="fas fa-users" style="color: #e76f51; margin-right: 5px;"></i> Max 8</span>
+                            <span><i class="fas fa-map-marker-alt" style="color: #e76f51; margin-right: 5px;"></i> Okavango Delta</span>
+                        </div>
+                        <p style="font-size: 14px; line-height: 1.6; color: #555; margin-bottom: 15px;">Experience the world's largest inland delta by mokoro canoe and safari vehicle.</p>
+                        <div class="tour-price" style="font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 15px;">From P12,500 <span style="font-size: 12px; font-weight: 400; color: #777;">per person sharing</span></div>
+                        <a href="tour-detail.html?id=1" class="btn-view" style="display: inline-block; background-color: transparent; border: 2px solid #e76f51; color: #e76f51; padding: 8px 20px; border-radius: 5px; text-decoration: none; font-weight: 600;">View Tour</a>
+                    </div>
+                </div>
+
+                <!-- Tour Card 2 - Safari -->
+                <div class="tour-card" data-category="safari" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                    <div class="tour-image" style="position: relative; height: 220px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1665270409076-880b210fb0fb?w=600&h=400&fit=crop" alt="Elephant herd walking along Chobe River at golden hour" width="600" height="400" style="width: 100%; height: 100%; object-fit: cover;">
+                        <span class="tour-badge" style="position: absolute; top: 15px; left: 15px; background-color: #e76f51; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">Safari</span>
+                    </div>
+                    <div class="tour-info" style="padding: 20px; text-align: left;">
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Chobe Elephant Kingdom</h3>
+                        <div class="tour-meta" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 12px; font-size: 13px; color: #777;">
+                            <span><i class="fas fa-calendar-alt" style="color: #e76f51; margin-right: 5px;"></i> 4 Days / 3 Nights</span>
+                            <span><i class="fas fa-users" style="color: #e76f51; margin-right: 5px;"></i> Max 10</span>
+                            <span><i class="fas fa-map-marker-alt" style="color: #e76f51; margin-right: 5px;"></i> Chobe National Park</span>
+                        </div>
+                        <p style="font-size: 14px; line-height: 1.6; color: #555; margin-bottom: 15px;">Witness massive elephant herds along the Chobe River.</p>
+                        <div class="tour-price" style="font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 15px;">From P9,800 <span style="font-size: 12px; font-weight: 400; color: #777;">per person sharing</span></div>
+                        <a href="tour-detail.html?id=2" class="btn-view" style="display: inline-block; background-color: transparent; border: 2px solid #e76f51; color: #e76f51; padding: 8px 20px; border-radius: 5px; text-decoration: none; font-weight: 600;">View Tour</a>
+                    </div>
+                </div>
+
+                <!-- Tour Card 3 - Cultural -->
+                <div class="tour-card" data-category="cultural" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: transform 0.3s;">
+                    <div class="tour-image" style="position: relative; height: 220px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1761078206756-68d3023f3021?w=600&h=400&fit=crop" alt="San Bushmen hunter demonstrating traditional tracking skills in Kalahari Desert" width="600" height="400" style="width: 100%; height: 100%; object-fit: cover;">
+                        <span class="tour-badge" style="position: absolute; top: 15px; left: 15px; background-color: #e76f51; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">Cultural</span>
+                    </div>
+                    <div class="tour-info" style="padding: 20px; text-align: left;">
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Kalahari Cultural Journey</h3>
+                        <div class="tour-meta" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 12px; font-size: 13px; color: #777;">
+                            <span><i class="fas fa-calendar-alt" style="color: #e76f51; margin-right: 5px;"></i> 3 Days / 2 Nights</span>
+                            <span><i class="fas fa-users" style="color: #e76f51; margin-right: 5px;"></i> Max 6</span>
+                            <span><i class="fas fa-map-marker-alt" style="color: #e76f51; margin-right: 5px;"></i> Central Kalahari</span>
+                        </div>
+                        <p style="font-size: 14px; line-height: 1.6; color: #555; margin-bottom: 15px;">Connect with San Bushmen culture and learn ancient survival skills.</p>
+                        <div class="tour-price" style="font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 15px;">From P7,200 <span style="font-size: 12px; font-weight: 400; color: #777;">per person sharing</span></div>
+                        <a href="tour-detail.html?id=3" class="btn-view" style="display: inline-block; background-color: transparent; border: 2px solid #e76f51; color: #e76f51; padding: 8px 20px; border-radius: 5px; text-decoration: none; font-weight: 600;">View Tour</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TOUR DETAILS MAIN CONTENT -->
-    <div class="tour-detail-container" style="max-width: 1200px; margin: 0 auto; padding: 60px 20px;">
-        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 50px;">
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials" style="padding: 80px 20px; background-color: white; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: #355e3b; margin-bottom: 15px;">What Our Travelers Say</h2>
+            <p class="section-subtitle" style="font-family: 'Open Sans', sans-serif; font-size: 16px; color: #777; margin-bottom: 40px;">Real experiences from guests who've explored Botswana with us</p>
             
-            <!-- LEFT COLUMN - Main Content -->
-            <div class="tour-main-content">
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
                 
-                <!-- Price & CTA Box (Mobile Only) -->
-                <div class="price-box-mobile" style="background-color: #2C5F2D; padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 30px; display: none;">
-                    <span style="font-size: 14px; color: #FDF8F0CC;">From</span>
-                    <h2 id="mobilePrice" style="font-size: 36px; color: white; margin: 5px 0;">P12,500</h2>
-                    <span style="font-size: 12px; color: #FDF8F0CC;">per person sharing</span>
-                    <a href="contact.html" class="btn-inquire" style="display: block; background-color: #E76F51; color: white; text-decoration: none; padding: 12px; border-radius: 8px; margin-top: 15px; font-weight: 600;">Inquire Now →</a>
-                </div>
-
-                <!-- Overview Section -->
-                <div class="overview-section" data-aos="fade-up" data-aos-duration="500">
-                    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: #2C5F2D; margin-bottom: 20px;">Tour Overview</h2>
-                    <p id="tourDescription" style="font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 20px;">Experience the magic of the Okavango Delta...</p>
-                    <div style="background-color: #FDF8F0; padding: 20px; border-radius: 12px; margin: 20px 0;">
-                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #2C5F2D; margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #2C5F2D; margin-right: 10px;"></i> Highlights</h3>
-                        <ul id="highlightsList" style="list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
-                            <li><i class="fas fa-check" style="color: #E76F51; margin-right: 8px;"></i> Loading...</li>
-                        </ul>
+                <div class="testimonial-card" style="background-color: #fdf8f0; padding: 30px; border-radius: 12px; text-align: left;">
+                    <div class="rating" style="margin-bottom: 15px;">
+                        <i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i>
+                    </div>
+                    <p class="testimonial-text" style="font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 20px; font-style: italic;">"The Okavango Delta experience exceeded all expectations. Our guide was incredibly knowledgeable and passionate."</p>
+                    <div class="testimonial-author">
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #355e3b; margin-bottom: 5px;">James Mokani</h4>
+                        <span style="font-size: 13px; color: #888;">Lusaka, Zambia</span>
                     </div>
                 </div>
 
-                <!-- Itinerary Tabs Section -->
-                <div class="itinerary-section" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: #2C5F2D; margin-bottom: 20px;">Itinerary</h2>
-                    
-                    <div class="tabs" style="margin-bottom: 20px;">
-                        <div style="display: flex; gap: 10px; border-bottom: 2px solid #eee; flex-wrap: wrap;">
-                            <button class="tab-btn active" data-tab="itinerary" style="background: none; border: none; padding: 12px 24px; cursor: pointer; font-weight: 600; color: #2C5F2D; border-bottom: 2px solid #E76F51; margin-bottom: -2px;">Full Itinerary</button>
-                            <button class="tab-btn" data-tab="inclusions" style="background: none; border: none; padding: 12px 24px; cursor: pointer; font-weight: 600; color: #666;">Inclusions</button>
-                            <button class="tab-btn" data-tab="exclusions" style="background: none; border: none; padding: 12px 24px; cursor: pointer; font-weight: 600; color: #666;">Exclusions</button>
-                            <button class="tab-btn" data-tab="tips" style="background: none; border: none; padding: 12px 24px; cursor: pointer; font-weight: 600; color: #666;">Travel Tips</button>
-                        </div>
+                <div class="testimonial-card" style="background-color: #fdf8f0; padding: 30px; border-radius: 12px; text-align: left;">
+                    <div class="rating" style="margin-bottom: 15px;">
+                        <i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i>
                     </div>
-
-                    <!-- Itinerary Tab Content -->
-                    <div id="itinerary" class="tab-content active">
-                        <div id="itineraryContent">
-                            <p>Loading itinerary...</p>
-                        </div>
-                    </div>
-
-                    <!-- Inclusions Tab Content -->
-                    <div id="inclusions" class="tab-content" style="display: none;">
-                        <ul id="inclusionsList" style="list-style: none; background-color: #FDF8F0; padding: 25px; border-radius: 12px;">
-                            <li>Loading...</li>
-                        </ul>
-                    </div>
-
-                    <!-- Exclusions Tab Content -->
-                    <div id="exclusions" class="tab-content" style="display: none;">
-                        <ul id="exclusionsList" style="list-style: none; background-color: #FDF8F0; padding: 25px; border-radius: 12px;">
-                            <li>Loading...</li>
-                        </ul>
-                    </div>
-
-                    <!-- Travel Tips Tab Content -->
-                    <div id="tips" class="tab-content" style="display: none;">
-                        <ul id="tipsList" style="list-style: none; background-color: #FDF8F0; padding: 25px; border-radius: 12px;">
-                            <li>Loading...</li>
-                        </ul>
+                    <p class="testimonial-text" style="font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 20px; font-style: italic;">"Best safari experience in Southern Africa. Mosepele's commitment to sustainability is truly impressive."</p>
+                    <div class="testimonial-author">
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #355e3b; margin-bottom: 5px;">Sarah Motcher</h4>
+                        <span style="font-size: 13px; color: #888;">Cape Town, South Africa</span>
                     </div>
                 </div>
 
-                <!-- Related Tours -->
-                <div class="related-tours" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" style="margin-top: 50px;">
-                    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: #2C5F2D; margin-bottom: 20px;">You Might Also Like</h2>
-                    <div id="relatedTours" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-                        <!-- Related tours will be dynamically inserted -->
+                <div class="testimonial-card" style="background-color: #fdf8f0; padding: 30px; border-radius: 12px; text-align: left;">
+                    <div class="rating" style="margin-bottom: 15px;">
+                        <i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i><i class="fas fa-star" style="color: #f4a261;"></i>
                     </div>
-                </div>
-            </div>
-
-            <!-- RIGHT COLUMN - Price & Inquiry Form (Desktop) -->
-            <div class="tour-sidebar" data-aos="fade-left" data-aos-duration="500">
-                <div class="price-box" style="background-color: #2C5F2D; padding: 25px; border-radius: 12px; text-align: center; margin-bottom: 30px; position: sticky; top: 20px;">
-                    <span style="font-size: 14px; color: #FDF8F0CC;">From</span>
-                    <h2 id="desktopPrice" style="font-size: 42px; color: white; margin: 5px 0;">P12,500</h2>
-                    <span style="font-size: 12px; color: #FDF8F0CC;">per person sharing</span>
-                    <a href="contact.html" class="btn-inquire" style="display: block; background-color: #E76F51; color: white; text-decoration: none; padding: 14px; border-radius: 8px; margin-top: 20px; font-weight: 600;">Inquire Now →</a>
-                </div>
-
-                <!-- Lite Inquiry Form -->
-                <div class="quick-inquiry" style="background-color: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #2C5F2D; margin-bottom: 20px;">Quick Inquiry</h3>
-                    <form id="quickInquiryForm">
-                        <div style="margin-bottom: 15px;">
-                            <input type="text" id="quickName" placeholder="Full Name" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: 'Open Sans', sans-serif;">
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <input type="email" id="quickEmail" placeholder="Email Address" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: 'Open Sans', sans-serif;">
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <input type="number" id="quickTravelers" placeholder="Number of Travelers" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: 'Open Sans', sans-serif;">
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <input type="date" id="quickDate" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: 'Open Sans', sans-serif;">
-                        </div>
-                        <button type="submit" style="width: 100%; background-color: #E76F51; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">Send Inquiry</button>
-                    </form>
-                    <div id="quickInquirySuccess" style="display: none; background-color: #d4edda; color: #155724; padding: 12px; border-radius: 8px; margin-top: 15px; text-align: center;">
-                        Thank you! We'll respond within 24 hours.
+                    <p class="testimonial-text" style="font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 20px; font-style: italic;">"Unforgettable wildlife encounters and luxurious camps. The Chobe elephants were absolutely magnificent!"</p>
+                    <div class="testimonial-author">
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #355e3b; margin-bottom: 5px;">David Chen</h4>
+                        <span style="font-size: 13px; color: #888;">San Francisco, USA</span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
- <!-- FOOTER -->
-<footer class="footer" style="background-color: #2c2c2c; color: #ccc; padding: 50px 40px 20px;">
-    <div class="footer-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
-        
-        <!-- Column 1: About -->
-        <div class="footer-column">
-            <a href="index.html" style="text-decoration: none;">
-                <h3 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white; font-size: 24px;">Mosepele</h3>
-            </a>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Authentic Botswana safari experiences crafted by local experts.</p>
-            <p class="footer-email" style="font-size: 14px; line-height: 1.6; margin-bottom: 10px; color: #e76f51;">info@mosepele.co.bw</p>
-        </div>
-        <div class="footer-column">
-            <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Quick Links</h4>
-            <ul style="list-style: none;">
-                <li style="margin-bottom: 10px;"><a href="index.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Home</a></li>
-                <li style="margin-bottom: 10px;"><a href="Tours.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Tours</a></li>
-                <li style="margin-bottom: 10px;"><a href="AboutUs.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">About Us</a></li>
-                <li style="margin-bottom: 10px;"><a href="Blog.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Blog</a></li>
-                <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Contact</a></li>
-                <li style="margin-bottom: 10px;"><a href="feedback.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Feedback</a></li>
-                <li style="margin-bottom: 10px;"><a href="booking.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Book Now</a></li>
-                <li style="margin-bottom: 10px;"><a href="faq.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">FAQs</a></li>
-                <li style="margin-bottom: 10px;"><a href="privacy.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Privacy Policy</a></li>
-                <li style="margin-bottom: 10px;"><a href="terms.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Terms & Conditions</a></li>
-                <li style="margin-bottom: 10px;"><a href="sitemap.html" style="color: #ccc; text-decoration: none; font-size: 14px; transition: color 0.3s;">Sitemap</a></li>
-            </ul>
-        </div>
-       <!-- Column 3: Social Media (UPDATED - WORKING LINKS) -->
-        <div class="footer-column">
-            <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Follow Us</h4>
-            <div class="social-icons">
-                <!-- Facebook - REPLACE # with your Facebook URL -->
-                <a href="https://www.facebook.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <!-- Instagram - REPLACE # with your Instagram URL -->
-                <a href="https://www.instagram.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <!-- YouTube - REPLACE # with your YouTube URL -->
-                <a href="https://www.youtube.com/@mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px; transition: color 0.3s;">
-                    <i class="fab fa-youtube"></i>
-                </a>
+    <!-- WHY CHOOSE US SECTION -->
+    <section class="why-choose-us" style="padding: 80px 20px; background-color: #fdf8f0; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 700; color: #355e3b; margin-bottom: 50px;">Why Choose Mosepele</h2>
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
+                <div class="feature">
+                    <i class="fas fa-user-tie" style="font-size: 48px; color: #e76f51; margin-bottom: 20px;"></i>
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Expert Local Guides</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.6;">Knowledgeable guides born and raised in Botswana</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-leaf" style="font-size: 48px; color: #e76f51; margin-bottom: 20px;"></i>
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Eco-Friendly Travel</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.6;">Sustainable practices protecting wildlife and habitats</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset" style="font-size: 48px; color: #e76f51; margin-bottom: 20px;"></i>
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">24/7 Support</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.6;">Round-the-clock assistance during your journey</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-pen-fancy" style="font-size: 48px; color: #e76f51; margin-bottom: 20px;"></i>
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #355e3b; margin-bottom: 12px;">Custom Itineraries</h3>
+                    <p style="font-size: 14px; color: #666; line-height: 1.6;">Tailored experiences designed just for you</p>
+                </div>
             </div>
         </div>
-        
-        <!-- Column 4: Newsletter -->
-        <div class="footer-column">
-            <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Newsletter</h4>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Get travel inspiration and special offers</p>
-            <form class="newsletter-form" style="display: flex; flex-direction: column; gap: 10px;">
-                <input type="email" placeholder="Your email address" style="padding: 10px; border: none; border-radius: 5px; font-family: 'Open Sans', sans-serif;">
-                <button type="submit" style="background-color: #e76f51; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: 600;">Subscribe</button>
-            </form>
-        </div>
-    </div>
-    <div class="footer-bottom" style="text-align: center; padding-top: 40px; margin-top: 40px; border-top: 1px solid #444; font-size: 12px;">
-        <p>&copy; 2026 Mosepele Travel & Tours. All rights reserved.</p>
-    </div>
-</footer>
-  
+    </section>
 
-    <!-- Main JavaScript -->
+    <!-- FOOTER -->
+    <footer class="footer" style="background-color: #2c2c2c; color: #ccc; padding: 50px 40px 20px;">
+        <div class="footer-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
+            
+            <div class="footer-column">
+                <a href="index.html" style="text-decoration: none;">
+                    <h3 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white; font-size: 24px;">Mosepele</h3>
+                </a>
+                <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Authentic Botswana safari experiences crafted by local experts.</p>
+                <p class="footer-email" style="font-size: 14px; line-height: 1.6; margin-bottom: 10px; color: #e76f51;">info@mosepele.co.bw</p>
+            </div>
+            
+            <div class="footer-column">
+                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Quick Links</h4>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 10px;"><a href="index.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Home</a></li>
+                    <li style="margin-bottom: 10px;"><a href="Tours.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Tours</a></li>
+                    <li style="margin-bottom: 10px;"><a href="AboutUs.html" style="color: #ccc; text-decoration: none; font-size: 14px;">About Us</a></li>
+                    <li style="margin-bottom: 10px;"><a href="Blog.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Blog</a></li>
+                    <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Contact</a></li>
+                    <li style="margin-bottom: 10px;"><a href="feedback.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Feedback</a></li>
+                    <li style="margin-bottom: 10px;"><a href="booking.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Book Now</a></li>
+                    <li style="margin-bottom: 10px;"><a href="faq.html" style="color: #ccc; text-decoration: none; font-size: 14px;">FAQs</a></li>
+                    <li style="margin-bottom: 10px;"><a href="privacy.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Privacy Policy</a></li>
+                    <li style="margin-bottom: 10px;"><a href="terms.html" style="color: #ccc; text-decoration: none; font-size: 14px;">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@mosepeletravel" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-right: 15px; color: #ccc; font-size: 20px;">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Newsletter</h4>
+                <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Get travel inspiration and special offers</p>
+                <form class="newsletter-form" style="display: flex; flex-direction: column; gap: 10px;">
+                    <input type="email" placeholder="Your email address" style="padding: 10px; border: none; border-radius: 5px; font-family: 'Open Sans', sans-serif;">
+                    <button type="submit" style="background-color: #e76f51; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: 600;">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom" style="text-align: center; padding-top: 40px; margin-top: 40px; border-top: 1px solid #444; font-size: 12px;">
+            <p>&copy; 2026 Mosepele Travel & Tours. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Tour Filtering -->
     <script>
-        // TOUR DATABASE - All 6 tours
-        const toursData = {
-            1: {
-                id: 1,
-                title: "Okavango Delta Explorer",
-                category: "Safari",
-                location: "Okavango Delta, Botswana",
-                duration: "5 Days / 4 Nights",
-                groupSize: "Max 8 People",
-                difficulty: "Easy",
-                price: "P12,500",
-                heroImage: "https://images.unsplash.com/photo-1627764409592-6c8e514e8ff5?w=1920&h=800&fit=crop",
-                description: "Experience the magic of the Okavango Delta, one of Africa's last great wilderness areas. This 5-day safari takes you deep into the heart of the world's largest inland delta, where crystal-clear waterways create a lush oasis teeming with wildlife. Navigate pristine channels by traditional mokoro canoe, embark on thrilling game drives, and spend nights under a blanket of stars at our exclusive mobile camp. Led by expert local guides born and raised in the Delta, this journey offers an authentic and immersive safari experience.",
-                highlights: [
-                    "Mokoro canoe excursions",
-                    "Morning & afternoon game drives",
-                    "Walking safaris with armed guides",
-                    "Bird watching (over 400 species)",
-                    "Sunset boat cruise",
-                    "Visit to local village"
-                ],
-                itinerary: [
-                    { day: "Day 1: Arrival in Maun", description: "Arrive at Maun Airport. Meet your guide and transfer to our camp on the edge of the Delta. Evening orientation and welcome dinner under the stars." },
-                    { day: "Day 2: Mokoro Canoe Adventure", description: "Morning mokoro excursion through narrow channels. Afternoon game drive in search of elephants, lions, and giraffes. Night safari drive after dinner." },
-                    { day: "Day 3: Walking Safari & Birding", description: "Guided walking safari to track wildlife on foot. Afternoon bird watching excursion. Visit to a local village to experience traditional life." },
-                    { day: "Day 4: Full Day Game Drive", description: "Full day game drive with picnic lunch. Explore remote areas of the Delta. Sunset cruise on the lagoon with sundowners." },
-                    { day: "Day 5: Departure", description: "Morning game drive followed by breakfast. Transfer to Maun Airport for your onward journey." }
-                ],
-                inclusions: [
-                    "Airport transfers in Maun",
-                    "All accommodation (4 nights)",
-                    "All meals as per itinerary",
-                    "Professional English-speaking guide",
-                    "Game drives in 4x4 safari vehicle",
-                    "Mokoro canoe excursion",
-                    "Park entrance fees",
-                    "Bottled water in the vehicle"
-                ],
-                exclusions: [
-                    "International flights",
-                    "Travel insurance",
-                    "Visa fees",
-                    "Alcoholic beverages",
-                    "Gratuities for guides",
-                    "Personal expenses"
-                ],
-                tips: [
-                    "Pack neutral-colored clothing (khaki, olive, beige)",
-                    "Bring a wide-brimmed hat and sunglasses",
-                    "Camera with zoom lens for wildlife",
-                    "Comfortable walking shoes",
-                    "High SPF sunscreen and insect repellent",
-                    "Binoculars for wildlife viewing"
-                ]
-            },
-            2: {
-                id: 2,
-                title: "Chobe Elephant Kingdom",
-                category: "Safari",
-                location: "Chobe National Park, Botswana",
-                duration: "4 Days / 3 Nights",
-                groupSize: "Max 10 People",
-                difficulty: "Easy",
-                price: "P9,800",
-                heroImage: "https://images.unsplash.com/photo-1665270409076-880b210fb0fb?w=1920&h=800&fit=crop",
-                description: "Witness massive elephant herds along the Chobe River in one of Africa's most spectacular wildlife destinations. Chobe National Park is home to over 50,000 elephants, offering unparalleled viewing opportunities. This 4-day safari combines river cruises and game drives to give you the best chance of seeing these magnificent creatures up close.",
-                highlights: [
-                    "Boat cruise on Chobe River",
-                    "Elephant encounters",
-                    "Sunset safari drives",
-                    "Bird watching (over 450 species)",
-                    "Photography hides",
-                    "Visit to Sedudu Island"
-                ],
-                itinerary: [
-                    { day: "Day 1: Arrival in Kasane", description: "Transfer to your lodge overlooking the Chobe River. Afternoon boat cruise to see elephants bathing and crossing the river." },
-                    { day: "Day 2: Full Day Safari", description: "Morning game drive followed by afternoon boat cruise. Watch elephants crossing the river at sunset." },
-                    { day: "Day 3: Chobe National Park", description: "Explore the Savute region. Visit the famous Serondela area known for its massive elephant herds." },
-                    { day: "Day 4: Departure", description: "Morning safari drive. Breakfast and transfer to Kasane Airport for your onward journey." }
-                ],
-                inclusions: [
-                    "Airport transfers",
-                    "All accommodation (3 nights)",
-                    "All meals",
-                    "Professional guide",
-                    "Boat cruises",
-                    "Game drives",
-                    "Park fees"
-                ],
-                exclusions: [
-                    "International flights",
-                    "Travel insurance",
-                    "Visa fees",
-                    "Alcoholic beverages",
-                    "Gratuities",
-                    "Personal expenses"
-                ],
-                tips: [
-                    "Bring binoculars for elephant viewing",
-                    "Camera with zoom lens",
-                    "Neutral colored clothing",
-                    "Sun hat and sunscreen",
-                    "Insect repellent",
-                    "Comfortable shoes"
-                ]
-            },
-            3: {
-                id: 3,
-                title: "Kalahari Cultural Journey",
-                category: "Cultural",
-                location: "Central Kalahari, Botswana",
-                duration: "3 Days / 2 Nights",
-                groupSize: "Max 6 People",
-                difficulty: "Moderate",
-                price: "P7,200",
-                heroImage: "https://images.unsplash.com/photo-1761078206756-68d3023f3021?w=1920&h=800&fit=crop",
-                description: "Connect with San Bushmen culture and learn ancient survival skills in the vast Kalahari Desert. This unique cultural experience offers deep insights into one of Africa's oldest indigenous groups. Walk with the San people as they share their knowledge of tracking, medicinal plants, and traditional hunting techniques.",
-                highlights: [
-                    "San Bushmen cultural experience",
-                    "Traditional hunting demonstrations",
-                    "Bushman language lessons",
-                    "Stargazing in the Kalahari",
-                    "Visit to Deception Valley",
-                    "Sunset at the pans"
-                ],
-                itinerary: [
-                    { day: "Day 1: Arrival", description: "Meet your San guides. Evening cultural storytelling around the campfire. Traditional dinner." },
-                    { day: "Day 2: Cultural Immersion", description: "Learn tracking skills, traditional medicine, and hunting techniques. Walk with the San people." },
-                    { day: "Day 3: Departure", description: "Morning nature walk. Transfer back to Gaborone for your onward journey." }
-                ],
-                inclusions: [
-                    "Cultural experiences",
-                    "All accommodation",
-                    "All meals",
-                    "San guide services",
-                    "Walking safaris",
-                    "Park fees"
-                ],
-                exclusions: [
-                    "International flights",
-                    "Travel insurance",
-                    "Visa fees",
-                    "Alcoholic beverages",
-                    "Gratuities"
-                ],
-                tips: [
-                    "Respect local customs",
-                    "Ask permission before taking photos",
-                    "Bring a good camera",
-                    "Light clothing for daytime",
-                    "Warm jacket for cold nights",
-                    "Insect repellent"
-                ]
-            },
-            4: {
-                id: 4,
-                title: "Makgadikgadi Salt Pans Adventure",
-                category: "Adventure",
-                location: "Makgadikgadi Pans, Botswana",
-                duration: "3 Days / 2 Nights",
-                groupSize: "Max 8 People",
-                difficulty: "Moderate",
-                price: "P8,500",
-                heroImage: "https://images.unsplash.com/photo-1760199078320-18976d421338?w=1920&h=800&fit=crop",
-                description: "Explore vast salt flats and sleep under endless starry skies. The Makgadikgadi Pans are among the largest salt flats in the world, offering a surreal landscape like no other. This adventure takes you across the white expanse, to ancient baobab trees, and into encounters with meerkats and other unique wildlife.",
-                highlights: [
-                    "Quad biking on salt pans",
-                    "Meerkat encounters",
-                    "Stargazing (International Dark Sky)",
-                    "Visit to Kubu Island",
-                    "Flamingo watching (wet season)",
-                    "Sleep under the stars"
-                ],
-                itinerary: [
-                    { day: "Day 1: Arrival", description: "Drive to the pans. Sunset at the salt flats. Dinner under the stars." },
-                    { day: "Day 2: Exploration", description: "Quad biking across the pans. Visit to Kubu Island. Night sky photography." },
-                    { day: "Day 3: Departure", description: "Morning meerkat encounter. Return to Maun for departure." }
-                ],
-                inclusions: [
-                    "Quad biking",
-                    "All accommodation",
-                    "All meals",
-                    "Professional guide",
-                    "Park fees",
-                    "Stargazing equipment"
-                ],
-                exclusions: [
-                    "International flights",
-                    "Travel insurance",
-                    "Alcoholic beverages",
-                    "Gratuities"
-                ],
-                tips: [
-                    "Bring sunglasses (the salt is bright!)",
-                    "Sun hat and sunscreen",
-                    "Camera with wide-angle lens",
-                    "Warm clothing for night",
-                    "Comfortable closed shoes",
-                    "Scarf for dust"
-                ]
-            },
-            5: {
-                id: 5,
-                title: "Moremi Game Reserve Safari",
-                category: "Safari",
-                location: "Moremi Game Reserve, Botswana",
-                duration: "6 Days / 5 Nights",
-                groupSize: "Max 8 People",
-                difficulty: "Easy",
-                price: "P15,800",
-                heroImage: "https://images.unsplash.com/photo-1759215290881-cc6a8ccbb37e?w=1920&h=800&fit=crop",
-                description: "Premium game viewing in one of Africa's most pristine reserves. Moremi covers parts of the Okavango Delta and is known for its diverse ecosystems and abundant wildlife. This 6-day safari offers the best chance to see the Big Five and rare African wild dogs.",
-                highlights: [
-                    "Big Five game viewing",
-                    "Night game drives",
-                    "Walking safaris",
-                    "Mokoro excursions",
-                    "Photography hides",
-                    "Wild dog sightings"
-                ],
-                itinerary: [
-                    { day: "Day 1: Arrival", description: "Fly into Moremi. Afternoon game drive. Welcome dinner." },
-                    { day: "Day 2: Xakanaxa Region", description: "Explore the lagoon system. Excellent bird watching. Night drive." },
-                    { day: "Day 3: Third Bridge", description: "Famous for big cats. Night safari drive." },
-                    { day: "Day 4: Khwai River", description: "Cross into Khwai area. Walking safari." },
-                    { day: "Day 5: Full Day Safari", description: "Explore remote areas. Bush dinner under the stars." },
-                    { day: "Day 6: Departure", description: "Morning game drive. Fly back to Maun." }
-                ],
-                inclusions: [
-                    "Internal flights",
-                    "All accommodation",
-                    "All meals",
-                    "Professional guide",
-                    "Game drives",
-                    "Walking safaris",
-                    "Park fees"
-                ],
-                exclusions: [
-                    "International flights",
-                    "Travel insurance",
-                    "Visa fees",
-                    "Alcoholic beverages",
-                    "Gratuities"
-                ],
-                tips: [
-                    "Bring a good camera with zoom",
-                    "Neutral colored clothing",
-                    "Binoculars",
-                    "Sun protection",
-                    "Insect repellent",
-                    "Warm jacket for mornings"
-                ]
-            },
-            6: {
-                id: 6,
-                title: "Walking Safari Experience",
-                category: "Adventure",
-                location: "Multiple Locations, Botswana",
-                duration: "5 Days / 4 Nights",
-                groupSize: "Max 6 People",
-                difficulty: "Challenging",
-                price: "P11,500",
-                heroImage: "https://images.unsplash.com/photo-1711062752040-8587e1a3b8e8?w=1920&h=800&fit=crop",
-                description: "Immerse yourself in the bush with guided walking safaris. Experience the thrill of tracking wildlife on foot with armed professional guides. This 5-day walking safari is perfect for those who want to connect deeply with the African wilderness.",
-                highlights: [
-                    "Guided bush walks",
-                    "Tracking skills workshop",
-                    "Bush survival skills",
-                    "Night walks",
-                    "Bird identification",
-                    "Plant medicine lessons"
-                ],
-                itinerary: [
-                    { day: "Day 1: Arrival", description: "Safety briefing. Introduction to bush walking. Short orientation walk." },
-                    { day: "Day 2: Tracking Day", description: "Learn to identify tracks and signs. Follow fresh spoor of wildlife." },
-                    { day: "Day 3: Bush Survival", description: "Edible plants, fire making, shelter building. Overnight in the bush." },
-                    { day: "Day 4: Night Walk", description: "Experience the bush after dark. Nocturnal wildlife encounters." },
-                    { day: "Day 5: Departure", description: "Morning walk. Breakfast and transfer out." }
-                ],
-                inclusions: [
-                    "Armed professional guides",
-                    "All accommodation",
-                    "All meals",
-                    "Tracking equipment",
-                    "Safety briefing",
-                    "Park fees"
-                ],
-                exclusions: [
-                    "International flights",
-                    "Travel insurance",
-                    "Alcoholic beverages",
-                    "Gratuities"
-                ],
-                tips: [
-                    "Good walking shoes (broken in)",
-                    "Long pants for bush walks",
-                    "Neutral colored clothing",
-                    "Sun hat and sunscreen",
-                    "Insect repellent",
-                    "Small backpack for day walks"
-                ]
-            }
-        };
-
-        // Get tour ID from URL
-        const urlParams = new URLSearchParams(window.location.search);
-        let tourId = urlParams.get('id');
-        
-        // Default to tour 1 if no ID or invalid ID
-        if (!tourId || !toursData[tourId]) {
-            tourId = 1;
-        }
-        
-        const tour = toursData[tourId];
-        
-        // Update page title
-        document.title = `${tour.title} - Mosepele Travel & Tours`;
-        
-        // Update hero section background
-        const heroSection = document.getElementById('tourHero');
-        if (heroSection) {
-            heroSection.style.background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${tour.heroImage}')`;
-            heroSection.style.backgroundSize = 'cover';
-            heroSection.style.backgroundPosition = 'center';
-        }
-        
-        // Update text content
-        document.getElementById('tourCategory').textContent = tour.category;
-        document.getElementById('tourTitle').textContent = tour.title;
-        document.getElementById('tourLocation').innerHTML = `<i class="fas fa-map-marker-alt" style="color: #D4A373; margin-right: 8px;"></i> ${tour.location}`;
-        document.getElementById('tourDuration').innerHTML = `<i class="far fa-clock" style="color: #D4A373; margin-right: 8px;"></i> ${tour.duration}`;
-        document.getElementById('tourGroupSize').innerHTML = `<i class="fas fa-users" style="color: #D4A373; margin-right: 8px;"></i> ${tour.groupSize}`;
-        document.getElementById('tourDifficulty').innerHTML = `<i class="fas fa-signal" style="color: #D4A373; margin-right: 8px;"></i> Difficulty: ${tour.difficulty}`;
-        document.getElementById('tourDescription').textContent = tour.description;
-        
-        // Update prices
-        document.getElementById('desktopPrice').textContent = tour.price;
-        const mobilePrice = document.getElementById('mobilePrice');
-        if (mobilePrice) mobilePrice.textContent = tour.price;
-        
-        // Update highlights
-        const highlightsList = document.getElementById('highlightsList');
-        highlightsList.innerHTML = '';
-        tour.highlights.forEach(highlight => {
-            const li = document.createElement('li');
-            li.innerHTML = `<i class="fas fa-check" style="color: #E76F51; margin-right: 8px;"></i> ${highlight}`;
-            highlightsList.appendChild(li);
-        });
-        
-        // Update itinerary
-        const itineraryContent = document.getElementById('itineraryContent');
-        itineraryContent.innerHTML = '';
-        tour.itinerary.forEach(day => {
-            const dayDiv = document.createElement('div');
-            dayDiv.className = 'day';
-            dayDiv.style.marginBottom = '25px';
-            dayDiv.style.padding = '20px';
-            dayDiv.style.backgroundColor = '#FDF8F0';
-            dayDiv.style.borderRadius = '12px';
-            dayDiv.innerHTML = `
-                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; color: #2C5F2D;"><i class="fas fa-sun" style="margin-right: 10px;"></i> ${day.day}</h3>
-                <p style="font-size: 14px; color: #555; margin-top: 10px;">${day.description}</p>
-            `;
-            itineraryContent.appendChild(dayDiv);
-        });
-        
-        // Update inclusions
-        const inclusionsList = document.getElementById('inclusionsList');
-        inclusionsList.innerHTML = '';
-        tour.inclusions.forEach(item => {
-            const li = document.createElement('li');
-            li.style.marginBottom = '12px';
-            li.innerHTML = `<i class="fas fa-check-circle" style="color: #2C5F2D; margin-right: 10px;"></i> ${item}`;
-            inclusionsList.appendChild(li);
-        });
-        
-        // Update exclusions
-        const exclusionsList = document.getElementById('exclusionsList');
-        exclusionsList.innerHTML = '';
-        tour.exclusions.forEach(item => {
-            const li = document.createElement('li');
-            li.style.marginBottom = '12px';
-            li.innerHTML = `<i class="fas fa-times-circle" style="color: #E76F51; margin-right: 10px;"></i> ${item}`;
-            exclusionsList.appendChild(li);
-        });
-        
-        // Update travel tips
-        const tipsList = document.getElementById('tipsList');
-        tipsList.innerHTML = '';
-        tour.tips.forEach(item => {
-            const li = document.createElement('li');
-            li.style.marginBottom = '12px';
-            li.innerHTML = `<i class="fas fa-lightbulb" style="color: #2C5F2D; margin-right: 10px;"></i> ${item}`;
-            tipsList.appendChild(li);
-        });
-        
-        // Update related tours (exclude current tour)
-        const relatedTours = document.getElementById('relatedTours');
-        relatedTours.innerHTML = '';
-        const otherTours = Object.values(toursData).filter(t => t.id != tour.id).slice(0, 2);
-        otherTours.forEach(related => {
-            const relatedDiv = document.createElement('div');
-            relatedDiv.style.backgroundColor = 'white';
-            relatedDiv.style.borderRadius = '12px';
-            relatedDiv.style.overflow = 'hidden';
-            relatedDiv.style.boxShadow = '0 5px 15px rgba(0,0,0,0.05)';
-            relatedDiv.innerHTML = `
-                <img src="${related.heroImage}" alt="${related.title}" style="width: 100%; height: 150px; object-fit: cover;">
-                <div style="padding: 15px;">
-                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; color: #2C5F2D;">${related.title}</h3>
-                    <p style="font-size: 12px; color: #666;">${related.duration}</p>
-                    <a href="tour-detail.html?id=${related.id}" style="color: #E76F51; text-decoration: none; font-weight: 600; font-size: 14px;">View Tour →</a>
-                </div>
-            `;
-            relatedTours.appendChild(relatedDiv);
-        });
-
-        // Tab functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            const tabContents = document.querySelectorAll('.tab-content');
+            const filterButtons = document.querySelectorAll('.category-btn');
+            const tourCards = document.querySelectorAll('.tour-card');
 
-            tabBtns.forEach(btn => {
+            function updateActiveButton(activeFilter) {
+                filterButtons.forEach(btn => {
+                    const filterValue = btn.getAttribute('data-category');
+                    if (filterValue === activeFilter) {
+                        btn.style.backgroundColor = '#355e3b';
+                        btn.style.color = 'white';
+                        btn.style.border = 'none';
+                    } else {
+                        btn.style.backgroundColor = 'transparent';
+                        btn.style.color = '#355e3b';
+                        btn.style.border = '2px solid #355e3b';
+                    }
+                });
+            }
+
+            function filterTours(category) {
+                tourCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (category === 'all' || cardCategory === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            filterButtons.forEach(btn => {
                 btn.addEventListener('click', function() {
-                    const tabId = this.getAttribute('data-tab');
-                    
-                    tabBtns.forEach(b => {
-                        b.style.color = '#666';
-                        b.style.borderBottom = 'none';
-                    });
-                    this.style.color = '#2C5F2D';
-                    this.style.borderBottom = '2px solid #E76F51';
-                    
-                    tabContents.forEach(content => {
-                        content.style.display = 'none';
-                    });
-                    document.getElementById(tabId).style.display = 'block';
+                    const filterValue = this.getAttribute('data-category');
+                    updateActiveButton(filterValue);
+                    filterTours(filterValue);
                 });
             });
 
-            // Quick inquiry form
-            const quickForm = document.getElementById('quickInquiryForm');
-            if (quickForm) {
-                quickForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const name = document.getElementById('quickName').value;
-                    const email = document.getElementById('quickEmail').value;
-                    
-                    if (!name || !email) {
-                        alert('Please fill in your name and email address.');
-                        return;
-                    }
-                    
-                    document.getElementById('quickInquirySuccess').style.display = 'block';
-                    quickForm.reset();
-                    setTimeout(() => {
-                        document.getElementById('quickInquirySuccess').style.display = 'none';
-                    }, 3000);
-                });
-            }
-
-            // Set minimum date to today
-            const dateInput = document.getElementById('quickDate');
-            if (dateInput) {
-                const today = new Date().toISOString().split('T')[0];
-                dateInput.setAttribute('min', today);
-            }
-
-            // Mobile responsive price box
-            function checkScreenSize() {
-                const priceBoxMobile = document.querySelector('.price-box-mobile');
-                if (window.innerWidth <= 992) {
-                    if (priceBoxMobile) priceBoxMobile.style.display = 'block';
-                } else {
-                    if (priceBoxMobile) priceBoxMobile.style.display = 'none';
-                }
-            }
-            checkScreenSize();
-            window.addEventListener('resize', checkScreenSize);
+            // Initialize: show all tours
+            filterTours('all');
         });
     </script>
 
@@ -725,7 +315,8 @@
             duration: 800
         });
     </script>
+    
     <!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
