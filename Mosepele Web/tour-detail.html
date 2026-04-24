@@ -41,7 +41,7 @@
         </nav>
     </div>
 
-    <!-- TOUR HERO SECTION (Dynamic) -->
+    <!-- TOUR HERO SECTION -->
     <section id="tourHero" style="height: 60vh; background-size: cover; background-position: center; display: flex; align-items: flex-end; padding-bottom: 40px;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="tour-hero-content" data-aos="fade-up" data-aos-duration="600">
@@ -63,16 +63,13 @@
             
             <!-- LEFT COLUMN -->
             <div class="tour-main-content">
-                
-                <!-- Price & CTA Box (Mobile Only) -->
                 <div class="price-box-mobile" style="background-color: #2C5F2D; padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 30px; display: none;">
                     <span style="font-size: 14px; color: #FDF8F0CC;">From</span>
                     <h2 id="mobilePrice" style="font-size: 36px; color: white; margin: 5px 0;">P0</h2>
                     <span style="font-size: 12px; color: #FDF8F0CC;">per person sharing</span>
-                    <a href="contact.html" class="btn-inquire" style="display: block; background-color: #E76F51; color: white; text-decoration: none; padding: 12px; border-radius: 8px; margin-top: 15px; font-weight: 600;">Inquire Now →</a>
+                    <a href="contact.html" style="display: block; background-color: #E76F51; color: white; text-decoration: none; padding: 12px; border-radius: 8px; margin-top: 15px; font-weight: 600;">Inquire Now →</a>
                 </div>
 
-                <!-- Overview Section -->
                 <div class="overview-section" data-aos="fade-up" data-aos-duration="500">
                     <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: #2C5F2D; margin-bottom: 20px;">Tour Overview</h2>
                     <p id="tourDescription" style="font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 20px;">Loading...</p>
@@ -84,11 +81,9 @@
                     </div>
                 </div>
 
-                <!-- Itinerary Tabs Section -->
                 <div class="itinerary-section" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                     <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: #2C5F2D; margin-bottom: 20px;">Itinerary</h2>
-                    
-                    <div class="tabs" style="margin-bottom: 20px;">
+                    <div style="margin-bottom: 20px;">
                         <div style="display: flex; gap: 10px; border-bottom: 2px solid #eee; flex-wrap: wrap;">
                             <button class="tab-btn active" data-tab="itinerary" style="background: none; border: none; padding: 12px 24px; cursor: pointer; font-weight: 600; color: #2C5F2D; border-bottom: 2px solid #E76F51; margin-bottom: -2px;">Full Itinerary</button>
                             <button class="tab-btn" data-tab="inclusions" style="background: none; border: none; padding: 12px 24px; cursor: pointer; font-weight: 600; color: #666;">Inclusions</button>
@@ -97,56 +92,29 @@
                         </div>
                     </div>
 
-                    <div id="itinerary" class="tab-content active">
-                        <div id="itineraryContent"><p>Loading itinerary...</p></div>
-                    </div>
-
-                    <div id="inclusions" class="tab-content" style="display: none;">
-                        <ul id="inclusionsList" style="list-style: none; background-color: #FDF8F0; padding: 25px; border-radius: 12px;"><li>Loading...</li></ul>
-                    </div>
-
-                    <div id="exclusions" class="tab-content" style="display: none;">
-                        <ul id="exclusionsList" style="list-style: none; background-color: #FDF8F0; padding: 25px; border-radius: 12px;"><li>Loading...</li></ul>
-                    </div>
-
-                    <div id="tips" class="tab-content" style="display: none;">
-                        <ul id="tipsList" style="list-style: none; background-color: #FDF8F0; padding: 25px; border-radius: 12px;"><li>Loading...</li></ul>
-                    </div>
-                </div>
-
-                <!-- Related Tours -->
-                <div class="related-tours" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" style="margin-top: 50px;">
-                    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: #2C5F2D; margin-bottom: 20px;">You Might Also Like</h2>
-                    <div id="relatedTours" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-                        <p>Loading related tours...</p>
-                    </div>
+                    <div id="itinerary" class="tab-content active"><div id="itineraryContent"><p>Loading itinerary...</p></div></div>
+                    <div id="inclusions" class="tab-content" style="display: none;"><ul id="inclusionsList" style="list-style: none; background-color: #FDF8F0; padding: 25px; border-radius: 12px;"><li>Loading...</li></ul></div>
+                    <div id="exclusions" class="tab-content" style="display: none;"><ul id="exclusionsList" style="list-style: none; background-color: #FDF8F0; padding: 25px; border-radius: 12px;"><li>Loading...</li></ul></div>
+                    <div id="tips" class="tab-content" style="display: none;"><ul id="tipsList" style="list-style: none; background-color: #FDF8F0; padding: 25px; border-radius: 12px;"><li>Loading...</li></ul></div>
                 </div>
             </div>
 
-            <!-- RIGHT COLUMN - Price & Inquiry Form -->
+            <!-- RIGHT COLUMN -->
             <div class="tour-sidebar" data-aos="fade-left" data-aos-duration="500">
                 <div class="price-box" style="background-color: #2C5F2D; padding: 25px; border-radius: 12px; text-align: center; margin-bottom: 30px; position: sticky; top: 20px;">
                     <span style="font-size: 14px; color: #FDF8F0CC;">From</span>
                     <h2 id="desktopPrice" style="font-size: 42px; color: white; margin: 5px 0;">P0</h2>
                     <span style="font-size: 12px; color: #FDF8F0CC;">per person sharing</span>
-                    <a href="contact.html" class="btn-inquire" style="display: block; background-color: #E76F51; color: white; text-decoration: none; padding: 14px; border-radius: 8px; margin-top: 20px; font-weight: 600;">Inquire Now →</a>
+                    <a href="contact.html" style="display: block; background-color: #E76F51; color: white; text-decoration: none; padding: 14px; border-radius: 8px; margin-top: 20px; font-weight: 600;">Inquire Now →</a>
                 </div>
 
                 <div class="quick-inquiry" style="background-color: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
                     <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: #2C5F2D; margin-bottom: 20px;">Quick Inquiry</h3>
                     <form id="quickInquiryForm">
-                        <div style="margin-bottom: 15px;">
-                            <input type="text" id="quickName" placeholder="Full Name" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <input type="email" id="quickEmail" placeholder="Email Address" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <input type="number" id="quickTravelers" placeholder="Number of Travelers" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <input type="date" id="quickDate" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                        </div>
+                        <input type="text" id="quickName" placeholder="Full Name" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                        <input type="email" id="quickEmail" placeholder="Email Address" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                        <input type="number" id="quickTravelers" placeholder="Number of Travelers" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                        <input type="date" id="quickDate" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px;">
                         <button type="submit" style="width: 100%; background-color: #E76F51; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: 600;">Send Inquiry</button>
                     </form>
                     <div id="quickInquirySuccess" style="display: none; background-color: #d4edda; color: #155724; padding: 12px; border-radius: 8px; margin-top: 15px; text-align: center;">Thank you! We'll respond within 24 hours.</div>
@@ -158,271 +126,83 @@
     <!-- FOOTER -->
     <footer class="footer" style="background-color: #2c2c2c; color: #ccc; padding: 50px 40px 20px;">
         <div class="footer-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
-            <div class="footer-column">
-                <a href="index.html" style="text-decoration: none;">
-                    <h3 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white; font-size: 24px;">Mosepele</h3>
-                </a>
-                <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">Authentic Botswana safari experiences crafted by local experts.</p>
-                <p class="footer-email" style="font-size: 14px; line-height: 1.6; margin-bottom: 10px; color: #e76f51;">info@mosepele.co.bw</p>
-            </div>
-            <div class="footer-column">
-                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Quick Links</h4>
-                <ul style="list-style: none;">
-                    <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
-                    <li><a href="Tours.html" style="color: #ccc; text-decoration: none;">Tours</a></li>
-                    <li><a href="AboutUs.html" style="color: #ccc; text-decoration: none;">About Us</a></li>
-                    <li><a href="Blog.html" style="color: #ccc; text-decoration: none;">Blog</a></li>
-                    <li><a href="contact.html" style="color: #ccc; text-decoration: none;">Contact</a></li>
-                    <li><a href="booking.html" style="color: #ccc; text-decoration: none;">Book Now</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Follow Us</h4>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/mosepeletravel" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/mosepeletravel" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@mosepeletravel" target="_blank"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="footer-column">
-                <h4 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 20px; color: white;">Newsletter</h4>
-                <form class="newsletter-form" style="display: flex; flex-direction: column; gap: 10px;">
-                    <input type="email" placeholder="Your email address">
-                    <button type="submit" style="background-color: #e76f51; color: white;">Subscribe</button>
-                </form>
-            </div>
+            <div class="footer-column"><a href="index.html"><h3 style="color: white;">Mosepele</h3></a><p>Authentic Botswana safari experiences.</p><p style="color: #e76f51;">info@mosepele.co.bw</p></div>
+            <div class="footer-column"><h4 style="color: white;">Quick Links</h4><ul style="list-style: none;"><li><a href="index.html" style="color: #ccc;">Home</a></li><li><a href="Tours.html" style="color: #ccc;">Tours</a></li><li><a href="AboutUs.html" style="color: #ccc;">About Us</a></li><li><a href="Blog.html" style="color: #ccc;">Blog</a></li><li><a href="contact.html" style="color: #ccc;">Contact</a></li><li><a href="booking.html" style="color: #ccc;">Book Now</a></li></ul></div>
+            <div class="footer-column"><h4 style="color: white;">Follow Us</h4><div><a href="https://www.facebook.com/mosepeletravel" target="_blank" style="color: #ccc; margin-right: 15px;"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/mosepeletravel" target="_blank" style="color: #ccc; margin-right: 15px;"><i class="fab fa-instagram"></i></a><a href="https://www.youtube.com/@mosepeletravel" target="_blank" style="color: #ccc;"><i class="fab fa-youtube"></i></a></div></div>
+            <div class="footer-column"><h4 style="color: white;">Newsletter</h4><form><input type="email" placeholder="Your email address" style="padding: 10px; width: 100%; margin-bottom: 10px;"><button type="submit" style="background-color: #e76f51; color: white; padding: 10px; width: 100%; border: none;">Subscribe</button></form></div>
         </div>
-        <div class="footer-bottom" style="text-align: center; padding-top: 40px; margin-top: 40px; border-top: 1px solid #444;">
-            <p>&copy; 2026 Mosepele Travel & Tours. All rights reserved.</p>
-        </div>
+        <div class="footer-bottom" style="text-align: center; padding-top: 40px;"><p>&copy; 2026 Mosepele Travel & Tours.</p></div>
     </footer>
 
-    <!-- Main JavaScript for Dynamic Tour Details -->
     <script>
-        // TOUR DATABASE - All 6 tours
+        // TOUR DATABASE
         const toursData = {
-            1: {
-                id: 1,
-                title: "Okavango Delta Explorer",
-                category: "Safari",
-                location: "Okavango Delta, Botswana",
-                duration: "5 Days / 4 Nights",
-                groupSize: "Max 8 People",
-                difficulty: "Easy",
-                price: "P12,500",
-                heroImage: "https://images.unsplash.com/photo-1627764409592-6c8e514e8ff5?w=1920&h=800&fit=crop",
-                description: "Experience the magic of the Okavango Delta, one of Africa's last great wilderness areas. This 5-day safari takes you deep into the heart of the world's largest inland delta, where crystal-clear waterways create a lush oasis teeming with wildlife. Navigate pristine channels by traditional mokoro canoe, embark on thrilling game drives, and spend nights under a blanket of stars at our exclusive mobile camp.",
-                highlights: ["Mokoro canoe excursions", "Morning & afternoon game drives", "Walking safaris with armed guides", "Bird watching (over 400 species)", "Sunset boat cruise", "Visit to local village"],
-                itinerary: [
-                    "Day 1: Arrival in Maun - Arrive at Maun Airport. Meet your guide and transfer to our camp on the edge of the Delta.",
-                    "Day 2: Mokoro Canoe Adventure - Morning mokoro excursion through narrow channels. Afternoon game drive in search of elephants, lions, and giraffes.",
-                    "Day 3: Walking Safari & Birding - Guided walking safari to track wildlife on foot. Afternoon bird watching excursion.",
-                    "Day 4: Full Day Game Drive - Full day game drive with picnic lunch. Explore remote areas of the Delta.",
-                    "Day 5: Departure - Morning game drive followed by breakfast. Transfer to Maun Airport."
-                ],
-                inclusions: ["Airport transfers", "All accommodation", "All meals", "Professional guide", "Game drives", "Mokoro excursion", "Park fees"],
-                exclusions: ["International flights", "Travel insurance", "Visa fees", "Alcoholic beverages", "Gratuities"],
-                tips: ["Pack neutral colors", "Bring a hat and sunscreen", "Camera with zoom lens", "Binoculars", "Insect repellent"]
-            },
-            2: {
-                id: 2,
-                title: "Chobe Elephant Kingdom",
-                category: "Safari",
-                location: "Chobe National Park, Botswana",
-                duration: "4 Days / 3 Nights",
-                groupSize: "Max 10 People",
-                difficulty: "Easy",
-                price: "P9,800",
-                heroImage: "https://images.unsplash.com/photo-1665270409076-880b210fb0fb?w=1920&h=800&fit=crop",
-                description: "Witness massive elephant herds along the Chobe River in one of Africa's most spectacular wildlife destinations. Chobe National Park is home to over 50,000 elephants, offering unparalleled viewing opportunities.",
-                highlights: ["Boat cruise on Chobe River", "Elephant encounters", "Sunset safari drives", "Bird watching", "Photography hides"],
-                itinerary: [
-                    "Day 1: Arrival in Kasane - Transfer to your lodge. Afternoon boat cruise.",
-                    "Day 2: Full Day Safari - Morning game drive. Afternoon boat cruise.",
-                    "Day 3: Chobe National Park - Explore the Savute region.",
-                    "Day 4: Departure - Morning safari drive. Transfer to airport."
-                ],
-                inclusions: ["Airport transfers", "All accommodation", "All meals", "Professional guide", "Boat cruises", "Game drives", "Park fees"],
-                exclusions: ["International flights", "Travel insurance", "Visa fees", "Alcoholic beverages", "Gratuities"],
-                tips: ["Bring binoculars", "Camera with zoom lens", "Neutral colored clothing", "Sun hat and sunscreen"]
-            },
-            3: {
-                id: 3,
-                title: "Kalahari Cultural Journey",
-                category: "Cultural",
-                location: "Central Kalahari, Botswana",
-                duration: "3 Days / 2 Nights",
-                groupSize: "Max 6 People",
-                difficulty: "Moderate",
-                price: "P7,200",
-                heroImage: "https://images.unsplash.com/photo-1761078206756-68d3023f3021?w=1920&h=800&fit=crop",
-                description: "Connect with San Bushmen culture and learn ancient survival skills in the vast Kalahari Desert. This unique cultural experience offers deep insights into one of Africa's oldest indigenous groups.",
-                highlights: ["San Bushmen cultural experience", "Traditional hunting demonstrations", "Bushman language lessons", "Stargazing in the Kalahari"],
-                itinerary: [
-                    "Day 1: Arrival - Meet your San guides. Evening cultural storytelling.",
-                    "Day 2: Cultural Immersion - Learn tracking skills, traditional medicine, and hunting techniques.",
-                    "Day 3: Departure - Morning nature walk. Transfer back to Gaborone."
-                ],
-                inclusions: ["Cultural experiences", "All accommodation", "All meals", "San guide services", "Walking safaris", "Park fees"],
-                exclusions: ["International flights", "Travel insurance", "Visa fees", "Alcoholic beverages", "Gratuities"],
-                tips: ["Respect local customs", "Ask permission before taking photos", "Bring a good camera", "Light clothing for daytime", "Warm jacket for cold nights"]
-            }
+            1: { title: "Okavango Delta Explorer", category: "Safari", location: "Okavango Delta, Botswana", duration: "5 Days / 4 Nights", groupSize: "Max 8 People", difficulty: "Easy", price: "P12,500", heroImage: "https://images.unsplash.com/photo-1627764409592-6c8e514e8ff5?w=1920&h=800&fit=crop", description: "Experience the magic of the Okavango Delta, one of Africa's last great wilderness areas.", highlights: ["Mokoro canoe excursions", "Game drives", "Walking safaris", "Bird watching"], itinerary: ["Day 1: Arrival in Maun", "Day 2: Mokoro Canoe Adventure", "Day 3: Walking Safari", "Day 4: Full Day Game Drive", "Day 5: Departure"], inclusions: ["Airport transfers", "Accommodation", "Meals", "Professional guide"], exclusions: ["Flights", "Insurance", "Visa fees"], tips: ["Pack neutral colors", "Bring sunscreen", "Camera"] },
+            2: { title: "Chobe Elephant Kingdom", category: "Safari", location: "Chobe National Park", duration: "4 Days / 3 Nights", groupSize: "Max 10 People", difficulty: "Easy", price: "P9,800", heroImage: "https://images.unsplash.com/photo-1665270409076-880b210fb0fb?w=1920&h=800&fit=crop", description: "Witness massive elephant herds along the Chobe River.", highlights: ["Boat cruise", "Elephant encounters", "Sunset drives"], itinerary: ["Day 1: Arrival", "Day 2: Full Day Safari", "Day 3: Chobe National Park", "Day 4: Departure"], inclusions: ["Transfers", "Accommodation", "Meals", "Guide"], exclusions: ["Flights", "Insurance"], tips: ["Binoculars", "Camera", "Sun hat"] },
+            3: { title: "Kalahari Cultural Journey", category: "Cultural", location: "Central Kalahari", duration: "3 Days / 2 Nights", groupSize: "Max 6 People", difficulty: "Moderate", price: "P7,200", heroImage: "https://images.unsplash.com/photo-1761078206756-68d3023f3021?w=1920&h=800&fit=crop", description: "Connect with San Bushmen culture and learn ancient survival skills.", highlights: ["San Bushmen experience", "Tracking skills", "Stargazing"], itinerary: ["Day 1: Arrival", "Day 2: Cultural Immersion", "Day 3: Departure"], inclusions: ["Cultural experience", "Accommodation", "Meals"], exclusions: ["Flights", "Insurance"], tips: ["Respect customs", "Ask before photos", "Warm jacket"] }
         };
 
-        // Get tour ID from URL
         const urlParams = new URLSearchParams(window.location.search);
         let tourId = urlParams.get('id');
-        
-        // Default to tour 1 if no ID
-        if (!tourId || !toursData[tourId]) {
-            tourId = 1;
-        }
-        
+        if (!tourId || !toursData[tourId]) tourId = 1;
         const tour = toursData[tourId];
-        
-        // Update page title
-        document.title = `${tour.title} - Mosepele Travel & Tours`;
-        
-        // Update hero section background
-        const heroSection = document.getElementById('tourHero');
-        if (heroSection) {
-            heroSection.style.background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${tour.heroImage}')`;
-            heroSection.style.backgroundSize = 'cover';
-            heroSection.style.backgroundPosition = 'center';
-        }
-        
-        // Update text content
+
+        document.title = `${tour.title} - Mosepele`;
+        document.getElementById('tourHero').style.background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${tour.heroImage}')`;
         document.getElementById('tourCategory').textContent = tour.category;
         document.getElementById('tourTitle').textContent = tour.title;
-        document.getElementById('tourLocation').innerHTML = `<i class="fas fa-map-marker-alt" style="color: #D4A373; margin-right: 8px;"></i> ${tour.location}`;
-        document.getElementById('tourDuration').innerHTML = `<i class="far fa-clock" style="color: #D4A373; margin-right: 8px;"></i> ${tour.duration}`;
-        document.getElementById('tourGroupSize').innerHTML = `<i class="fas fa-users" style="color: #D4A373; margin-right: 8px;"></i> ${tour.groupSize}`;
-        document.getElementById('tourDifficulty').innerHTML = `<i class="fas fa-signal" style="color: #D4A373; margin-right: 8px;"></i> Difficulty: ${tour.difficulty}`;
+        document.getElementById('tourLocation').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${tour.location}`;
+        document.getElementById('tourDuration').innerHTML = `<i class="far fa-clock"></i> ${tour.duration}`;
+        document.getElementById('tourGroupSize').innerHTML = `<i class="fas fa-users"></i> ${tour.groupSize}`;
+        document.getElementById('tourDifficulty').innerHTML = `<i class="fas fa-signal"></i> Difficulty: ${tour.difficulty}`;
         document.getElementById('tourDescription').textContent = tour.description;
-        
-        // Update prices
         document.getElementById('desktopPrice').textContent = tour.price;
-        const mobilePrice = document.getElementById('mobilePrice');
-        if (mobilePrice) mobilePrice.textContent = tour.price;
-        
-        // Update highlights
+        if(document.getElementById('mobilePrice')) document.getElementById('mobilePrice').textContent = tour.price;
+
         const highlightsList = document.getElementById('highlightsList');
         highlightsList.innerHTML = '';
-        tour.highlights.forEach(highlight => {
-            const li = document.createElement('li');
-            li.innerHTML = `<i class="fas fa-check" style="color: #E76F51; margin-right: 8px;"></i> ${highlight}`;
-            highlightsList.appendChild(li);
-        });
-        
-        // Update itinerary
+        tour.highlights.forEach(h => { const li = document.createElement('li'); li.innerHTML = `<i class="fas fa-check"></i> ${h}`; highlightsList.appendChild(li); });
+
         const itineraryContent = document.getElementById('itineraryContent');
         itineraryContent.innerHTML = '';
-        tour.itinerary.forEach(day => {
-            const dayDiv = document.createElement('div');
-            dayDiv.style.marginBottom = '25px';
-            dayDiv.style.padding = '20px';
-            dayDiv.style.backgroundColor = '#FDF8F0';
-            dayDiv.style.borderRadius = '12px';
-            dayDiv.innerHTML = `<h3 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 700; color: #2C5F2D;">${day.split(' - ')[0]}</h3><p style="font-size: 14px; color: #555; margin-top: 10px;">${day.split(' - ')[1]}</p>`;
-            itineraryContent.appendChild(dayDiv);
-        });
-        
-        // Update inclusions
+        tour.itinerary.forEach(day => { const div = document.createElement('div'); div.style.padding = '15px'; div.style.marginBottom = '10px'; div.style.backgroundColor = '#FDF8F0'; div.style.borderRadius = '8px'; div.innerHTML = `<strong>${day}</strong>`; itineraryContent.appendChild(div); });
+
         const inclusionsList = document.getElementById('inclusionsList');
         inclusionsList.innerHTML = '';
-        tour.inclusions.forEach(item => {
-            const li = document.createElement('li');
-            li.style.marginBottom = '12px';
-            li.innerHTML = `<i class="fas fa-check-circle" style="color: #2C5F2D; margin-right: 10px;"></i> ${item}`;
-            inclusionsList.appendChild(li);
-        });
-        
-        // Update exclusions
+        tour.inclusions.forEach(i => { const li = document.createElement('li'); li.innerHTML = `<i class="fas fa-check-circle"></i> ${i}`; inclusionsList.appendChild(li); });
+
         const exclusionsList = document.getElementById('exclusionsList');
         exclusionsList.innerHTML = '';
-        tour.exclusions.forEach(item => {
-            const li = document.createElement('li');
-            li.style.marginBottom = '12px';
-            li.innerHTML = `<i class="fas fa-times-circle" style="color: #E76F51; margin-right: 10px;"></i> ${item}`;
-            exclusionsList.appendChild(li);
-        });
-        
-        // Update tips
+        tour.exclusions.forEach(e => { const li = document.createElement('li'); li.innerHTML = `<i class="fas fa-times-circle"></i> ${e}`; exclusionsList.appendChild(li); });
+
         const tipsList = document.getElementById('tipsList');
         tipsList.innerHTML = '';
-        tour.tips.forEach(item => {
-            const li = document.createElement('li');
-            li.style.marginBottom = '12px';
-            li.innerHTML = `<i class="fas fa-lightbulb" style="color: #2C5F2D; margin-right: 10px;"></i> ${item}`;
-            tipsList.appendChild(li);
-        });
+        tour.tips.forEach(t => { const li = document.createElement('li'); li.innerHTML = `<i class="fas fa-lightbulb"></i> ${t}`; tipsList.appendChild(li); });
 
         // Tab functionality
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        tabBtns.forEach(btn => {
+        document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', function() {
-                const tabId = this.getAttribute('data-tab');
-                tabBtns.forEach(b => {
-                    b.style.color = '#666';
-                    b.style.borderBottom = 'none';
-                });
-                this.style.color = '#2C5F2D';
-                this.style.borderBottom = '2px solid #E76F51';
-                tabContents.forEach(content => {
-                    content.style.display = 'none';
-                });
-                document.getElementById(tabId).style.display = 'block';
+                document.querySelectorAll('.tab-btn').forEach(b => { b.style.color = '#666'; b.style.borderBottom = 'none'; });
+                this.style.color = '#2C5F2D'; this.style.borderBottom = '2px solid #E76F51';
+                document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+                document.getElementById(this.getAttribute('data-tab')).style.display = 'block';
             });
         });
 
-        // Quick inquiry form
-        const quickForm = document.getElementById('quickInquiryForm');
-        if (quickForm) {
-            quickForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const name = document.getElementById('quickName').value;
-                const email = document.getElementById('quickEmail').value;
-                if (!name || !email) {
-                    alert('Please fill in your name and email address.');
-                    return;
-                }
-                document.getElementById('quickInquirySuccess').style.display = 'block';
-                quickForm.reset();
-                setTimeout(() => {
-                    document.getElementById('quickInquirySuccess').style.display = 'none';
-                }, 3000);
-            });
-        }
+        document.getElementById('quickInquiryForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if(!document.getElementById('quickName').value || !document.getElementById('quickEmail').value) { alert('Please fill name and email'); return; }
+            document.getElementById('quickInquirySuccess').style.display = 'block';
+            this.reset();
+            setTimeout(() => document.getElementById('quickInquirySuccess').style.display = 'none', 3000);
+        });
 
-        // Set minimum date for date picker
-        const dateInput = document.getElementById('quickDate');
-        if (dateInput) {
-            const today = new Date().toISOString().split('T')[0];
-            dateInput.setAttribute('min', today);
-        }
-
-        // Mobile responsive price box
-        function checkScreenSize() {
-            const priceBoxMobile = document.querySelector('.price-box-mobile');
-            if (window.innerWidth <= 992) {
-                if (priceBoxMobile) priceBoxMobile.style.display = 'block';
-            } else {
-                if (priceBoxMobile) priceBoxMobile.style.display = 'none';
-            }
-        }
-        checkScreenSize();
-        window.addEventListener('resize', checkScreenSize);
+        const today = new Date().toISOString().split('T')[0];
+        if(document.getElementById('quickDate')) document.getElementById('quickDate').setAttribute('min', today);
     </script>
 
-    <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ once: true, duration: 800 });
-    </script>
-    
-    <!-- Bootstrap JS Bundle -->
+    <script>AOS.init({ once: true, duration: 800 });</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
