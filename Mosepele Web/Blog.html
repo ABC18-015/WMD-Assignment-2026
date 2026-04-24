@@ -308,190 +308,189 @@
 
     <!-- JavaScript for Category Filtering, Search, and Modal -->
     <script>
-        // Blog posts database
-        const blogPosts = {
-            1: {
-                title: "Best Time to Visit the Okavango Delta",
-                date: "March 15, 2026",
-                category: "Destination Guides",
-                content: "<p>The Okavango Delta is a year-round destination, but the best time to visit depends on what you want to see and experience.</p><h3>Flood Season (June - August)</h3><p>This is the peak season when the delta is flooded, creating incredible waterways for mokoro safaris. Wildlife concentrates around the water sources, making game viewing exceptional.</p><h3>Green Season (November - March)</h3><p>Lush landscapes, newborn animals, and spectacular bird watching. This is also the low season with lower prices and fewer tourists.</p><h3>Dry Season (April - October)</h3><p>Animals gather around permanent water sources, making them easier to spot. The weather is pleasant with sunny days and cool nights.</p>"
-            },
-            2: {
-                title: "What to Pack for a Botswana Safari",
-                date: "March 10, 2026",
-                category: "Safari Tips",
-                content: "<p>Packing for a Botswana safari requires careful planning. Here's your essential packing list:</p><h3>Clothing</h3><p>Neutral-colored clothing (khaki, olive, beige), long sleeves and pants for protection, warm jacket for early mornings, swimwear for lodges with pools.</p><h3>Footwear</h3><p>Comfortable closed-toe walking shoes, sandals for camp, waterproof boots if traveling in wet season.</p><h3>Gear</h3><p>Binoculars, camera with zoom lens, headlamp/flashlight, power bank, sunscreen and insect repellent.</p>"
-            },
-            3: {
-                title: "Supporting Elephant Conservation in Chobe",
-                date: "March 5, 2026",
-                category: "Conservation",
-                content: "<p>Chobe National Park is home to over 50,000 elephants - one of the largest concentrations in Africa. Mosepele partners with local conservation organizations to protect these magnificent creatures.</p><h3>Our Conservation Efforts</h3><p>We contribute 10% of all safari proceeds to anti-poaching patrols, support elephant tracking and research programs, and work with local communities to reduce human-elephant conflict.</p><h3>How You Can Help</h3><p>Choose responsible tour operators, avoid elephant riding or entertainment venues, and consider donating to conservation organizations working in the region.</p>"
-            },
-            4: {
-                title: "Walking Safaris: A Different Perspective",
-                date: "February 28, 2026",
-                category: "Safari Tips",
-                content: "<p>A walking safari offers an intimate connection with the African bush that you simply cannot get from a vehicle.</p><h3>What to Expect</h3><p>Guided by armed professional guides, you'll learn to track animals, identify plants and birds, and understand the delicate ecosystem around you.</p><h3>Safety First</h3><p>Your guide will brief you on safety protocols. Always listen to your guide, stay quiet, and wear appropriate neutral-colored clothing.</p><h3>Best Locations</h3><p>The Okavango Delta and Moremi Game Reserve offer excellent walking safari opportunities with diverse wildlife and terrain.</p>"
-            },
-            5: {
-                title: "Meeting the San Bushmen of the Kalahari",
-                date: "February 20, 2026",
-                category: "Destination Guides",
-                content: "<p>The San Bushmen are one of Africa's oldest indigenous groups, with a rich cultural heritage dating back over 20,000 years.</p><h3>Cultural Experience</h3><p>Visitors can learn about traditional hunting techniques, medicinal plants, and ancient survival skills directly from San guides.</p><h3>Respectful Tourism</h3><p>Mosepele ensures that all cultural visits are conducted respectfully, with fair compensation to the San communities and minimal disruption to their traditional way of life.</p><h3>What You'll Learn</h3><p>Tracking skills, fire-making without matches, finding water in the desert, and the incredible biodiversity of the Kalahari.</p>"
-            },
-            6: {
-                title: "Photography Tips for Safari",
-                date: "February 15, 2026",
-                category: "Safari Tips",
-                content: "<p>Capturing stunning wildlife images requires patience, skill, and the right equipment.</p><h3>Camera Gear</h3><p>A zoom lens (200-400mm or more) is essential for wildlife photography. Bring extra batteries and memory cards as you'll shoot more than expected.</p><h3>Settings</h3><p>Use shutter priority mode (Tv) with a speed of at least 1/500s for moving animals. Shoot in RAW format for better editing flexibility.</p><h3>Composition Tips</h3><p>Get on eye level with animals, use the rule of thirds, and capture behavior rather than just portraits. The golden hours (sunrise and sunset) offer the best light.</p>"
-            },
-            7: {
-                title: "Announcing Our New Sustainability Initiative",
-                date: "February 10, 2026",
-                category: "Company News",
-                content: "<p>Mosepele is proud to announce our commitment to carbon-neutral operations by 2027.</p><h3>Our Pledge</h3><p>We will offset all carbon emissions from our safari vehicles, flights, and lodges. We're also eliminating single-use plastics across all our operations.</p><h3>Community Impact</h3><p>We're expanding our community support programs, including scholarships for local guides and funding for village water projects.</p><h3>Join Us</h3><p>Travel with Mosepele and know that your safari is helping protect Botswana's wilderness for future generations.</p>"
-            }
-        };
-
-        // Open modal with blog post content
-        function openBlogModal(id) {
-            const post = blogPosts[id];
-            const modal = document.getElementById('blogModal');
-            const modalContent = document.getElementById('modalContent');
-            
-            if (post) {
-                modalContent.innerHTML = `
-                    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: #2C5F2D; margin-bottom: 10px;">${post.title}</h2>
-                    <div style="display: flex; gap: 15px; margin-bottom: 20px; font-size: 14px; color: #666;">
-                        <span><i class="far fa-calendar-alt" style="color: #D4A373; margin-right: 5px;"></i> ${post.date}</span>
-                        <span><i class="fas fa-tag" style="color: #D4A373; margin-right: 5px;"></i> ${post.category}</span>
-                    </div>
-                    <div style="line-height: 1.8; color: #555;">
-                        ${post.content}
-                    </div>
-                    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
-                        <p style="font-size: 14px; color: #888;">Questions about this topic? <a href="contact.html" style="color: #E76F51;">Contact our experts →</a></p>
-                    </div>
-                `;
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            }
+    // Blog posts database
+    const blogPosts = {
+        1: {
+            title: "Best Time to Visit the Okavango Delta",
+            date: "March 15, 2026",
+            category: "Destination Guides",
+            content: "<p>The Okavango Delta is a year-round destination, but the best time to visit depends on what you want to see and experience.</p><h3>Flood Season (June - August)</h3><p>This is the peak season when the delta is flooded, creating incredible waterways for mokoro safaris. Wildlife concentrates around the water sources, making game viewing exceptional.</p><h3>Green Season (November - March)</h3><p>Lush landscapes, newborn animals, and spectacular bird watching. This is also the low season with lower prices and fewer tourists.</p><h3>Dry Season (April - October)</h3><p>Animals gather around permanent water sources, making them easier to spot. The weather is pleasant with sunny days and cool nights.</p>"
+        },
+        2: {
+            title: "What to Pack for a Botswana Safari",
+            date: "March 10, 2026",
+            category: "Safari Tips",
+            content: "<p>Packing for a Botswana safari requires careful planning. Here's your essential packing list:</p><h3>Clothing</h3><p>Neutral-colored clothing (khaki, olive, beige), long sleeves and pants for protection, warm jacket for early mornings, swimwear for lodges with pools.</p><h3>Footwear</h3><p>Comfortable closed-toe walking shoes, sandals for camp, waterproof boots if traveling in wet season.</p><h3>Gear</h3><p>Binoculars, camera with zoom lens, headlamp/flashlight, power bank, sunscreen and insect repellent.</p>"
+        },
+        3: {
+            title: "Supporting Elephant Conservation in Chobe",
+            date: "March 5, 2026",
+            category: "Conservation",
+            content: "<p>Chobe National Park is home to over 50,000 elephants - one of the largest concentrations in Africa. Mosepele partners with local conservation organizations to protect these magnificent creatures.</p><h3>Our Conservation Efforts</h3><p>We contribute 10% of all safari proceeds to anti-poaching patrols, support elephant tracking and research programs, and work with local communities to reduce human-elephant conflict.</p><h3>How You Can Help</h3><p>Choose responsible tour operators, avoid elephant riding or entertainment venues, and consider donating to conservation organizations working in the region.</p>"
+        },
+        4: {
+            title: "Walking Safaris: A Different Perspective",
+            date: "February 28, 2026",
+            category: "Safari Tips",
+            content: "<p>A walking safari offers an intimate connection with the African bush that you simply cannot get from a vehicle.</p><h3>What to Expect</h3><p>Guided by armed professional guides, you'll learn to track animals, identify plants and birds, and understand the delicate ecosystem around you.</p><h3>Safety First</h3><p>Your guide will brief you on safety protocols. Always listen to your guide, stay quiet, and wear appropriate neutral-colored clothing.</p><h3>Best Locations</h3><p>The Okavango Delta and Moremi Game Reserve offer excellent walking safari opportunities with diverse wildlife and terrain.</p>"
+        },
+        5: {
+            title: "Meeting the San Bushmen of the Kalahari",
+            date: "February 20, 2026",
+            category: "Destination Guides",
+            content: "<p>The San Bushmen are one of Africa's oldest indigenous groups, with a rich cultural heritage dating back over 20,000 years.</p><h3>Cultural Experience</h3><p>Visitors can learn about traditional hunting techniques, medicinal plants, and ancient survival skills directly from San guides.</p><h3>Respectful Tourism</h3><p>Mosepele ensures that all cultural visits are conducted respectfully, with fair compensation to the San communities and minimal disruption to their traditional way of life.</p><h3>What You'll Learn</h3><p>Tracking skills, fire-making without matches, finding water in the desert, and the incredible biodiversity of the Kalahari.</p>"
+        },
+        6: {
+            title: "Photography Tips for Safari",
+            date: "February 15, 2026",
+            category: "Safari Tips",
+            content: "<p>Capturing stunning wildlife images requires patience, skill, and the right equipment.</p><h3>Camera Gear</h3><p>A zoom lens (200-400mm or more) is essential for wildlife photography. Bring extra batteries and memory cards as you'll shoot more than expected.</p><h3>Settings</h3><p>Use shutter priority mode (Tv) with a speed of at least 1/500s for moving animals. Shoot in RAW format for better editing flexibility.</p><h3>Composition Tips</h3><p>Get on eye level with animals, use the rule of thirds, and capture behavior rather than just portraits. The golden hours (sunrise and sunset) offer the best light.</p>"
+        },
+        7: {
+            title: "Announcing Our New Sustainability Initiative",
+            date: "February 10, 2026",
+            category: "Company News",
+            content: "<p>Mosepele is proud to announce our commitment to carbon-neutral operations by 2027.</p><h3>Our Pledge</h3><p>We will offset all carbon emissions from our safari vehicles, flights, and lodges. We're also eliminating single-use plastics across all our operations.</p><h3>Community Impact</h3><p>We're expanding our community support programs, including scholarships for local guides and funding for village water projects.</p><h3>Join Us</h3><p>Travel with Mosepele and know that your safari is helping protect Botswana's wilderness for future generations.</p>"
         }
+    };
 
-        // Close modal
-        function closeBlogModal() {
-            document.getElementById('blogModal').style.display = 'none';
-            document.body.style.overflow = 'auto';
+    // Open modal with blog post content
+    function openBlogModal(id) {
+        const post = blogPosts[id];
+        const modal = document.getElementById('blogModal');
+        const modalContent = document.getElementById('modalContent');
+        
+        if (post) {
+            modalContent.innerHTML = `
+                <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: #2C5F2D; margin-bottom: 10px;">${post.title}</h2>
+                <div style="display: flex; gap: 15px; margin-bottom: 20px; font-size: 14px; color: #666;">
+                    <span><i class="far fa-calendar-alt" style="color: #D4A373; margin-right: 5px;"></i> ${post.date}</span>
+                    <span><i class="fas fa-tag" style="color: #D4A373; margin-right: 5px;"></i> ${post.category}</span>
+                </div>
+                <div style="line-height: 1.8; color: #555;">
+                    ${post.content}
+                </div>
+                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+                    <p style="font-size: 14px; color: #888;">Questions about this topic? <a href="contact.html" style="color: #E76F51;">Contact our experts →</a></p>
+                </div>
+            `;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
         }
+    }
 
-        // Close modal when clicking outside content
-        document.getElementById('blogModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeBlogModal();
-            }
-        });
+    // Close modal
+    function closeBlogModal() {
+        document.getElementById('blogModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
 
-        // Category filtering and search functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const categoryLinks = document.querySelectorAll('.category-link');
-            const blogCards = document.querySelectorAll('.blog-card');
-            const featuredPost = document.querySelector('.featured-post');
-            const searchInput = document.getElementById('searchInput');
-            const searchButton = document.getElementById('searchButton');
+    // Close modal when clicking outside content
+    document.getElementById('blogModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeBlogModal();
+        }
+    });
 
-            function filterByCategory(category) {
-                let visibleCount = 0;
-                
-                categoryLinks.forEach(link => {
-                    if (link.getAttribute('data-category') === category) {
-                        link.style.backgroundColor = '#2C5F2D';
-                        link.style.color = 'white';
-                    } else {
-                        link.style.backgroundColor = '#FDF8F0';
-                        link.style.color = '#333';
-                    }
-                });
+    // Category filtering and search functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const categoryLinks = document.querySelectorAll('.category-link');
+        const blogCards = document.querySelectorAll('.blog-card');
+        const featuredPost = document.querySelector('.featured-post');
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.getElementById('searchButton');
 
-                blogCards.forEach(card => {
-                    const categorySpan = card.querySelector('.fa-tag').parentElement.innerText.trim();
-                    let cardCategoryValue = '';
-                    
-                    if (categorySpan.includes('Safari Tips')) cardCategoryValue = 'safari-tips';
-                    else if (categorySpan.includes('Destination Guides')) cardCategoryValue = 'destination-guides';
-                    else if (categorySpan.includes('Conservation')) cardCategoryValue = 'conservation';
-                    else if (categorySpan.includes('Company News')) cardCategoryValue = 'company-news';
-                    
-                    if (category === 'all' || cardCategoryValue === category) {
-                        card.style.display = 'block';
-                        visibleCount++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-
-                if (featuredPost) {
-                    featuredPost.style.display = category === 'all' ? 'block' : 'none';
-                }
-            }
-
+        function filterByCategory(category) {
             categoryLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const category = this.getAttribute('data-category');
-                    filterByCategory(category);
-                });
+                if (link.getAttribute('data-category') === category) {
+                    link.style.backgroundColor = '#2C5F2D';
+                    link.style.color = 'white';
+                } else {
+                    link.style.backgroundColor = '#FDF8F0';
+                    link.style.color = '#333';
+                }
             });
 
-            function searchArticles() {
-                const searchTerm = searchInput.value.toLowerCase();
+            blogCards.forEach(card => {
+                const categorySpan = card.querySelector('.fa-tag').parentElement.innerText.trim();
+                let cardCategoryValue = '';
                 
-                blogCards.forEach(card => {
-                    const title = card.querySelector('h4').innerText.toLowerCase();
-                    const excerpt = card.querySelector('p').innerText.toLowerCase();
-                    
-                    if (title.includes(searchTerm) || excerpt.includes(searchTerm) || searchTerm === '') {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+                if (categorySpan.includes('Safari Tips')) cardCategoryValue = 'safari-tips';
+                else if (categorySpan.includes('Destination Guides')) cardCategoryValue = 'destination-guides';
+                else if (categorySpan.includes('Conservation')) cardCategoryValue = 'conservation';
+                else if (categorySpan.includes('Company News')) cardCategoryValue = 'company-news';
                 
-                if (featuredPost) {
-                    const featuredTitle = featuredPost.querySelector('h2').innerText.toLowerCase();
-                    const featuredExcerpt = featuredPost.querySelector('p').innerText.toLowerCase();
-                    featuredPost.style.display = (featuredTitle.includes(searchTerm) || featuredExcerpt.includes(searchTerm) || searchTerm === '') ? 'block' : 'none';
+                if (category === 'all' || cardCategoryValue === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
                 }
-            }
+            });
 
-            if (searchButton) {
-                searchButton.addEventListener('click', searchArticles);
+            if (featuredPost) {
+                featuredPost.style.display = category === 'all' ? 'block' : 'none';
             }
-            
-            if (searchInput) {
-                searchInput.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter') {
-                        searchArticles();
-                    }
-                });
-            }
+        }
 
-            const newsletterSubscribe = document.getElementById('newsletterSubscribe');
-            if (newsletterSubscribe) {
-                newsletterSubscribe.addEventListener('click', function() {
-                    const email = document.getElementById('newsletterEmail').value;
-                    if (email && email.includes('@')) {
-                        alert('Thank you for subscribing! You will receive our newsletter at ' + email);
-                        document.getElementById('newsletterEmail').value = '';
-                    } else {
-                        alert('Please enter a valid email address.');
-                    }
-                });
-            }
+        categoryLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const category = this.getAttribute('data-category');
+                filterByCategory(category);
+            });
         });
-    </script>
 
-    <!-- AOS Script -->
+        function searchArticles() {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            blogCards.forEach(card => {
+                const title = card.querySelector('h4').innerText.toLowerCase();
+                const excerpt = card.querySelector('p').innerText.toLowerCase();
+                
+                if (title.includes(searchTerm) || excerpt.includes(searchTerm) || searchTerm === '') {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            if (featuredPost) {
+                const featuredTitle = featuredPost.querySelector('h2').innerText.toLowerCase();
+                const featuredExcerpt = featuredPost.querySelector('p').innerText.toLowerCase();
+                featuredPost.style.display = (featuredTitle.includes(searchTerm) || featuredExcerpt.includes(searchTerm) || searchTerm === '') ? 'block' : 'none';
+            }
+        }
+
+        if (searchButton) {
+            searchButton.addEventListener('click', searchArticles);
+        }
+        
+        if (searchInput) {
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchArticles();
+                }
+            });
+        }
+
+        const newsletterSubscribe = document.getElementById('newsletterSubscribe');
+        if (newsletterSubscribe) {
+            newsletterSubscribe.addEventListener('click', function() {
+                const email = document.getElementById('newsletterEmail').value;
+                if (email && email.includes('@')) {
+                    alert('Thank you for subscribing! You will receive our newsletter at ' + email);
+                    document.getElementById('newsletterEmail').value = '';
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+        }
+        
+        // Initialize with all posts visible
+        filterByCategory('all');
+    });
+</script>
+        <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -499,5 +498,8 @@
             duration: 800
         });
     </script>
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
